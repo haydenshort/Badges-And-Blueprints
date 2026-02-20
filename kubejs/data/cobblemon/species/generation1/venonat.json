@@ -1,0 +1,158 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 48,
+  "name": "Venonat",
+  "primaryType": "bug",
+  "secondaryType": "poison",
+  "maleRatio": 0.5,
+  "height": 10,
+  "weight": 300,
+  "pokedex": [
+    "cobblemon.species.venonat.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "compoundeyes",
+    "tintedlens",
+    "h:runaway"
+  ],
+  "eggGroups": [
+    "bug"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "attack": 55,
+    "defence": 55,
+    "special_attack": 50,
+    "special_defence": 60,
+    "speed": 45
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 1,
+    "speed": 0
+  },
+  "baseExperienceYield": 61,
+  "experienceGroup": "medium_fast",
+  "catchRate": 190,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.8,
+    "height": 0.9,
+    "fixed": false
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "day"
+      ],
+      "drowsyChance": 0.0033,
+      "rouseChance": 0.0042
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "combat": {
+      "willDefendOwner": true
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "minecraft:string",
+        "quantityRange": "0-1"
+      },
+      {
+        "item": "cobblemon:persim_berry",
+        "percentage": 2.5
+      }
+    ]
+  },
+  "moves": [
+    "1:absorb",
+    "1:supersonic",
+    "1:tackle",
+    "5:strugglebug",
+    "8:foresight",
+    "11:confusion",
+    "14:acidspray",
+    "16:poisonpowder",
+    "16:sleeppowder",
+    "16:stunspore",
+    "18:bugbite",
+    "20:psybeam",
+    "23:disable",
+    "26:poisonfang",
+    "29:ragepowder",
+    "32:skillswap",
+    "35:singalbeam",
+    "38:morningsun",
+    "41:toxicspikes",
+    "44:leechlife",
+    "47:bugbuzz",
+    "50:batonpass",
+
+    "egg:agility",
+    "egg:gigadrain",
+    "egg:screech",
+    "egg:secretpower",
+    "egg:signalbeam",
+
+    "tm:toxic",
+    "tm:venoshock",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:protect",
+    "tm:gigadrain",
+    "tm:frustration",
+    "tm:solarbeam",
+    "tm:return",
+    "tm:psychic",
+    "tm:sludgebomb",
+    "tm:infestation",
+    "tm:facade",
+    "tm:rest",
+    "tm:flash",
+    "tm:bugbuzz",
+    "tm:substitute",
+    "tm:psychicnoise",
+    "tm:reflect",
+    "tm:thief",
+
+    "tutor:bugbite",
+    "tutor:gigadrain",
+    "tutor:signalbeam",
+    "tutor:skillswap",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:zenheadbutt"
+  ],
+  "evolutions": [
+    {
+      "id": "venonat_venomoth",
+      "variant": "level_up",
+      "result": "venomoth",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 28
+        }
+      ]
+    }
+  ]
+}

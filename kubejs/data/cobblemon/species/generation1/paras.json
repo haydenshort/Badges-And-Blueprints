@@ -1,0 +1,193 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 46,
+  "name": "Paras",
+  "primaryType": "bug",
+  "secondaryType": "grass",
+  "maleRatio": 0.5,
+  "height": 3,
+  "weight": 54,
+  "pokedex": [
+    "cobblemon.species.paras.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "effectspore",
+    "dryskin",
+    "h:damp"
+  ],
+  "eggGroups": [
+    "bug",
+    "grass"
+  ],
+  "baseStats": {
+    "hp": 35,
+    "attack": 70,
+    "defence": 55,
+    "special_attack": 45,
+    "special_defence": 55,
+    "speed": 25
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 1,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 57,
+  "experienceGroup": "medium_fast",
+  "catchRate": 190,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 0.7,
+  "hitbox": {
+    "width": 1,
+    "height": 0.5,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "willSleepOnBed": true,
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0014,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "2",
+      "toleratedLeaders": [
+        {
+          "pokemon": "paras",
+          "tier": 1
+        },
+        {
+          "pokemon": "parasect",
+          "tier": 2
+        }
+      ]
+    },
+    "combat": {
+      "willDefendOwner": true
+    }
+  },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "minecraft:red_mushroom",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "cobblemon:coba_berry",
+        "percentage": 2.5
+      }
+    ]
+  },
+  "moves": [
+    "1:absorb",
+    "1:scratch",
+    "1:stringshot",
+    "4:pursuit",
+    "7:poisonpowder",
+    "7:stunspore",
+    "10:metalclaw",
+    "13:bugbite",
+    "16:bulletseed",
+    "19:spore",
+    "21:strugglebug",
+    "23:wideguard",
+    "25:leechlife",
+    "27:leechseed",
+    "29:aromatherapy",
+    "31:psybeam",
+    "34:seedbomb",
+    "37:crosspoison",
+    "40:crosschop",
+    "44:agility",
+    "48:growth",
+    "52:lunge",
+    "56:synthesis",
+
+    "egg:counter",
+    "egg:endure",
+    "egg:fellstinger",
+    "egg:flail",
+    "egg:grassyterrain",
+    "egg:naturalgift",
+    "egg:rototiller",
+    "egg:screech",
+    "egg:sweetscent",
+
+    "tm:honeclaws",
+    "tm:toxic",
+    "tm:venoshock",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:lightscreen",
+    "tm:protect",
+    "tm:gigadrain",
+    "tm:frustration",
+    "tm:solarbeam",
+    "tm:return",
+    "tm:dig",
+    "tm:brickbreak",
+    "tm:sludgebomb",
+    "tm:aerialace",
+    "tm:infestation",
+    "tm:facade",
+    "tm:rest",
+    "tm:energyball",
+    "tm:falseswipe",
+    "tm:flash",
+    "tm:swordsdance",
+    "tm:bugbuzz",
+    "tm:xscissor",
+    "tm:grassknot",
+    "tm:substitute",
+    "tm:rocksmash",
+    "tm:cut",
+    "tm:crabhammer",
+    "tm:grassyglide",
+    "tm:thief",
+    "tm:leafblade",
+
+    "tutor:afteryou",
+    "tutor:bugbite",
+    "tutor:gigadrain",
+    "tutor:knockoff",
+    "tutor:seedbomb",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:synthesis",
+    "tutor:bodyslam",
+    "tutor:worryseed"
+  ],
+  "evolutions": [
+    {
+      "id": "paras_parasect",
+      "variant": "level_up",
+      "result": "parasect",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 24
+        }
+      ]
+    }
+  ]
+}

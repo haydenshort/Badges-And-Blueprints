@@ -1,0 +1,363 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 37,
+  "name": "Vulpix",
+  "primaryType": "fire",
+  "maleRatio": 0.25,
+  "height": 6,
+  "weight": 99,
+  "pokedex": [
+    "cobblemon.species.vulpix.desc"
+  ],
+  "labels": [
+    "gen1",
+    "kantonian_form"
+  ],
+  "aspects": [],
+  "abilities": [
+    "drought",
+    "flashfire",
+    "h:drought"
+  ],
+  "eggGroups": [
+    "field"
+  ],
+  "baseStats": {
+    "hp": 38,
+    "attack": 41,
+    "defence": 40,
+    "special_attack": 50,
+    "special_defence": 65,
+    "speed": 65
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 1
+  },
+  "baseExperienceYield": 60,
+  "experienceGroup": "medium_fast",
+  "catchRate": 190,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "features": [
+    "alolan"
+  ],
+  "baseScale": 0.7,
+  "hitbox": {
+    "width": 0.7,
+    "height": 1.1,
+    "fixed": false
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "light": "0-4",
+      "times": [
+        "167-11833,13702-22299"
+      ],
+      "drowsyChance": 0.0021,
+      "rouseChance": 0.0042
+    },
+    "itemInteract": {
+      "desiredItems": [
+        {
+          "_comment": "Drop it",
+          "item": "minecraft:glass_bottle",
+          "pickupPriority": -1
+        },
+        {
+          "item": "minecraft:potion",
+          "pickupPriority": 1,
+          "returnItem": "minecraft:glass_bottle",
+          "fullnessValue": 10
+        }
+      ]
+    },
+    "herd": {
+      "maxSize": "2",
+      "toleratedLeaders": [
+        {
+          "pokemon": "ninetales",
+          "tier": 1
+        }
+      ]
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInLava": true
+      }
+    },
+    "combat": {
+      "willDefendOwner": true
+    },
+    "fireImmune": true
+  },
+  "ai": [
+    {
+      "type": "apply_behaviours",
+      "behaviours": [
+        "cobblemon:pokemon_fox"
+      ]
+    }
+  ],
+  "drops": {
+    "amount": 5,
+    "entries": [
+      {
+        "item": "minecraft:sweet_berries",
+        "quantityRange": "1-3"
+      },
+      {
+        "item": "minecraft:charcoal",
+        "percentage": 2.5
+      },
+      {
+        "item": "cobblemon:rawst_berry",
+        "percentage": 2.5
+      }
+    ]
+  },
+  "moves": [
+    "1:ember",
+    "1:spite",
+    "1:tailwhip",
+    "4:safeguard",
+    "7:confuseray",
+    "10:quickattack",
+    "13:captivate",
+    "16:feintattack",
+    "19:firespin",
+    "22:hypnosis",
+    "25:zenheadbutt",
+    "28:hex",
+    "31:flameburst",
+    "34:ominouswind",
+    "37:painsplit",
+    "40:imprison",
+    "44:inferno",
+    "48:memento",
+    "52:flareblitz",
+    "56:extrasensory",
+    "60:grudge",
+
+    "egg:captivate",
+    "egg:disable",
+    "egg:flail",
+    "egg:memento",
+    "egg:powerswap",
+    "egg:secretpower",
+
+    "tm:roar",
+    "tm:toxic",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:protect",
+    "tm:triattack",
+    "tm:frustration",
+    "tm:return",
+    "tm:dig",
+    "tm:dazzlinggleam",
+    "tm:flamethrower",
+    "tm:fireblast",
+    "tm:facade",
+    "tm:flamecharge",
+    "tm:rest",
+    "tm:mysticalfire",
+    "tm:overheat",
+    "tm:energyball",
+    "tm:weatherball",
+    "tm:incinerate",
+    "tm:willowisp",
+    "tm:powergem",
+    "tm:psychup",
+    "tm:substitute",
+    "tm:scorchingsands",
+
+    "tutor:covet",
+    "tutor:darkpulse",
+    "tutor:foulplay",
+    "tutor:heatwave",
+    "tutor:irontail",
+    "tutor:painsplit",
+    "tutor:roleplay",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:spite",
+    "tutor:bodyslam",
+    "tutor:tailslap",
+    "tutor:zenheadbutt"
+  ],
+  "evolutions": [
+    {
+      "id": "vulpix_ninetales",
+      "variant": "item_interact",
+      "result": "ninetales",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [],
+      "requiredContext": "cobblemon:fire_stone"
+    }
+  ],
+  "forms": [
+    {
+      "name": "Alola",
+      "primaryType": "ice",
+      "maleRatio": 0.25,
+      "height": 6,
+      "weight": 99,
+      "baseScale": 0.6,
+      "hitbox": {
+        "width": 0.7,
+        "height": 1.1,
+        "fixed": false
+      },
+      "pokedex": [
+        "cobblemon.species.vulpix-alola.desc"
+      ],
+      "labels": [
+        "gen7",
+        "alolan_form"
+      ],
+      "aspects": [
+        "alolan"
+      ],
+      "abilities": [
+        "snowwarning",
+        "snowcloak",
+        "h:snowwarning"
+      ],
+      "drops": {
+        "amount": 5,
+        "entries": [
+          {
+            "item": "minecraft:sweet_berries",
+            "quantityRange": "1-3"
+          },
+          {
+            "item": "minecraft:snowball",
+            "quantityRange": "0-1"
+          },
+          {
+            "item": "cobblemon:babiri_berry",
+            "percentage": 2.5
+          }
+        ]
+      },
+      "moves": [
+        "1:powdersnow",
+        "1:spite",
+        "1:tailwhip",
+        "4:safeguard",
+        "7:confuseray",
+        "10:quickattack",
+        "13:mist",
+        "16:feintattack",
+        "19:iceshard",
+        "22:hypnosis",
+        "25:zenheadbutt",
+        "28:hex",
+        "31:aurorabeam",
+        "34:ominouswind",
+        "37:painsplit",
+        "40:imprison",
+        "44:blizzard",
+        "48:memento",
+        "52:moonblast",
+        "56:extrasensory",
+        "60:grudge",
+
+        "egg:captivate",
+        "egg:disable",
+        "egg:flail",
+        "egg:memento",
+        "egg:powerswap",
+        "egg:secretpower",
+
+        "tm:roar",
+        "tm:toxic",
+        "tm:hiddenpower",
+        "tm:snowscape",
+        "tm:protect",
+        "tm:triattack",
+        "tm:frustration",
+        "tm:return",
+        "tm:icywind",
+        "tm:dazzlinggleam",
+        "tm:aurorabeam",
+        "tm:icebeam",
+        "tm:facade",
+        "tm:iceshard",
+        "tm:rest",
+        "tm:mist",
+        "tm:calmmind",
+        "tm:weatherball",
+        "tm:energyball",
+        "tm:frostbreath",
+        "tm:willowisp",
+        "tm:powergem",
+        "tm:psychup",
+        "tm:substitute",
+        "tm:hex",
+
+        "tutor:covet",
+        "tutor:icywind",
+        "tutor:moonblast",
+        "tutor:foulplay",
+        "tutor:irontail",
+        "tutor:painsplit",
+        "tutor:roleplay",
+        "tutor:sleeptalk",
+        "tutor:snore",
+        "tutor:spite",
+        "tutor:bodyslam",
+        "tutor:tailslap",
+        "tutor:zenheadbutt"
+      ],
+      "evolutions": [
+        {
+          "id": "vulpix_ninetalesalola",
+          "variant": "item_interact",
+          "result": "ninetales alolan",
+          "consumeHeldItem": false,
+          "learnableMoves": [],
+          "requirements": [],
+          "requiredContext": "cobblemon:ice_stone"
+        }
+      ],
+      "battleOnly": false,
+      "behaviour": {
+        "herd": {
+          "maxSize": "2",
+          "toleratedLeaders": [
+            {
+              "pokemon": "ninetales",
+              "tier": 1
+            }
+          ]
+        },
+        "resting": {
+          "willSleepOnBed": true,
+          "times": [
+            "167-11833,13702-22299"
+          ],
+          "drowsyChance": 0.0021,
+          "rouseChance": 0.0042
+        },
+        "moving": {
+          "swim": {
+            "avoidsWater": true
+          }
+        },
+        "combat": {
+          "willDefendOwner": true
+        }
+      }
+    }
+  ]
+}

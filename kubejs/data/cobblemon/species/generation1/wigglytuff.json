@@ -1,0 +1,224 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 40,
+  "name": "Wigglytuff",
+  "primaryType": "normal",
+  "secondaryType": "fairy",
+  "maleRatio": 0.25,
+  "height": 10,
+  "weight": 120,
+  "pokedex": [
+    "cobblemon.species.wigglytuff.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "hugepower",
+    "friendguard",
+    "h:friendguard"
+  ],
+  "eggGroups": [
+    "fairy"
+  ],
+  "baseStats": {
+    "hp": 140,
+    "attack": 60,
+    "defence": 45,
+    "special_attack": 95,
+    "special_defence": 50,
+    "speed": 45
+  },
+  "evYield": {
+    "hp": 3,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 218,
+  "experienceGroup": "fast",
+  "catchRate": 50,
+  "eggCycles": 10,
+  "baseFriendship": 50,
+  "baseScale": 0.8,
+  "hitbox": {
+    "width": 1,
+    "height": 1.4,
+    "fixed": false
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0014,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "4"
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      },
+      "fly": {
+        "canFly": true
+      }
+    },
+    "combat": {
+      "willDefendOwner": true
+    }
+  },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "cobblemon:moon_stone",
+        "percentage": 10
+      },
+      {
+        "item": "cobblemon:air_balloon",
+        "percentage": 10
+      },
+      {
+        "item": "cobblemon:oran_berry",
+        "percentage": 10
+      }
+    ]
+  },
+  "moves": [
+    "1:doubleedge",
+    "1:moonblast",
+    "1:nastyplot",
+    "1:perishsong",
+    "1:sing",
+    "20:gravity",
+    "30:covet",
+    "50:playrough",
+    "60:boomburst",
+
+    "egg:captivate",
+    "egg:covet",
+    "egg:faketears",
+    "egg:feintattack",
+    "egg:gravity",
+    "egg:healpulse",
+    "egg:mistyterrain",
+    "egg:perishsong",
+    "egg:present",
+    "egg:punishment",
+    "egg:wish",
+
+    "tm:toxic",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:icebeam",
+    "tm:blizzard",
+    "tm:hyperbeam",
+    "tm:lightscreen",
+    "tm:protect",
+    "tm:raindance",
+    "tm:triattack",
+    "tm:frustration",
+    "tm:solarbeam",
+    "tm:thundebolt",
+    "tm:thunder",
+    "tm:thunderbolt",
+    "tm:return",
+    "tm:dig",
+    "tm:psychic",
+    "tm:shadowball",
+    "tm:brickbreak",
+    "tm:dazzlinggleam",
+    "tm:reflect",
+    "tm:flamethrower",
+    "tm:fireblast",
+    "tm:facade",
+    "tm:rest",
+    "tm:poweruppunch",
+    "tm:lowsweep",
+    "tm:echoedvoice",
+    "tm:focusblast",
+    "tm:chargebeam",
+    "tm:incinerate",
+    "tm:powergem",
+    "tm:retaliate",
+    "tm:gigaimpact",
+    "tm:flash",
+    "tm:thunderwave",
+    "tm:gyroball",
+    "tm:psychup",
+    "tm:workup",
+    "tm:playrough",
+    "tm:grassknot",
+    "tm:substitute",
+    "tm:wildcharge",
+    "tm:strength",
+    "tm:aurasphere",
+    "tm:drainingkiss",
+    "tm:expandingforce",
+    "tm:icespinner",
+    "tm:mistyexplosion",
+    "tm:psychicnoise",
+    "tm:teleport",
+
+    "tutor:bounce",
+    "tutor:covet",
+    "tutor:drainpunch",
+    "tutor:endeavor",
+    "tutor:firepunch",
+    "tutor:gravity",
+    "tutor:healbell",
+    "tutor:helpinghand",
+    "tutor:hypervoice",
+    "tutor:icepunch",
+    "tutor:icywind",
+    "tutor:knockoff",
+    "tutor:lastresort",
+    "tutor:magiccoat",
+    "tutor:magicroom",
+    "tutor:painsplit",
+    "tutor:recycle",
+    "tutor:roleplay",
+    "tutor:sleeptalk",
+    "tutor:snatch",
+    "tutor:snore",
+    "tutor:stealthrock",
+    "tutor:alluringvoice",
+    "tutor:bodyslam",
+    "tutor:focuspunch",
+    "tutor:trailblaze",
+    "tutor:uproar",
+    "tutor:thunderpunch"
+  ],
+  "preEvolution": "jigglypuff",
+  "evolutions": [],
+  "riding": {
+    "stats": {
+      "SPEED": {
+        "ranges": "10-20"
+      },
+      "ACCELERATION": {
+        "ranges": "40-80"
+      },
+      "SKILL": {
+        "ranges": "10-50"
+      },
+      "JUMP": {
+        "ranges": "10-20"
+      },
+      "STAMINA": {
+        "ranges": "10-30"
+      }
+    },
+    "seats": [],
+    "behaviour": {
+      "key": "cobblemon:air/glider"
+    }
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 28,
+  "name": "Sandslash",
+  "primaryType": "ground",
+  "maleRatio": 0.5,
+  "height": 10,
+  "weight": 295,
+  "pokedex": [
+    "cobblemon.species.sandslash.desc"
+  ],
+  "labels": [
+    "gen1",
+    "kantonian_form"
+  ],
+  "aspects": [],
+  "abilities": [
+    "roughskin",
+    "sandveil",
+    "h:sandrush"
+  ],
+  "eggGroups": [
+    "field"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "attack": 100,
+    "defence": 110,
+    "special_attack": 45,
+    "special_defence": 55,
+    "speed": 65
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 2,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 158,
+  "experienceGroup": "medium_fast",
+  "catchRate": 90,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "features": [
+    "alolan"
+  ],
+  "baseScale": 0.7,
+  "hitbox": {
+    "width": 1,
+    "height": 1.3,
+    "fixed": false
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "combat": {
+      "willDefendSelf": true,
+      "willDefendOwner": true,
+      "willFlee": false
+    }
+  },
+  "drops": {
+    "amount": 5,
+    "entries": [
+      {
+        "item": "minecraft:armadillo_scute",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "cobblemon:grip_claw",
+        "percentage": 5
+      },
+      {
+        "item": "cobblemon:quick_claw",
+        "percentage": 5
+      },
+      {
+        "item": "cobblemon:soft_sand",
+        "percentage": 5
+      }
+    ]
+  },
+  "moves": [
+    "1:counter",
+    "1:defensecurl",
+    "1:rollout",
+    "1:scratch",
+    "4:poisonsting",
+    "7:magnitude",
+    "10:furycutter",
+    "13:scorchingsands",
+    "16:metalclaw",
+    "19:bulldoze",
+    "22:accelerock",
+    "23:fling",
+    "25:slash",
+    "25:nightslash",
+    "27:superfang",
+    "29:agility",
+    "32:chipaway",
+    "35:spikes",
+    "38:pinmissle",
+    "42:drillrun",
+    "46:crushclaw",
+    "50:rapidspin",
+    "54:leechlife",
+    "58:focuspunch",
+    "62:headlongrush",
+
+    "egg:chipaway",
+    "egg:counter",
+    "egg:endure",
+    "egg:flail",
+    "egg:honeclaws",
+    "egg:metalclaw",
+    "egg:mudshot",
+    "egg:rockclimb",
+    "egg:rototiller",
+
+    "tm:honeclaws",
+    "tm:toxic",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:hyperbeam",
+    "tm:protect",
+    "tm:frustration",
+    "tm:earthquake",
+    "tm:return",
+    "tm:dig",
+    "tm:brickbreak",
+    "tm:sandstorm",
+    "tm:rocktomb",
+    "tm:aerialace",
+    "tm:facade",
+    "tm:rest",
+    "tm:lowsweep",
+    "tm:focusblast",
+    "tm:shadowclaw",
+    "tm:gigaimpact",
+    "tm:stoneedge",
+    "tm:gyroball",
+    "tm:swordsdance",
+    "tm:bulldoze",
+    "tm:rockslide",
+    "tm:xscissor",
+    "tm:workup",
+    "tm:poisonjab",
+    "tm:rockclimb",
+    "tm:substitute",
+    "tm:rocksmash",
+    "tm:cut",
+    "tm:strength",
+    "tm:highhorsepower",
+    "tm:stompingtantrum",
+    "tm:thief",
+    "tm:smackdown",
+    "tm:rockpolish",
+
+    "tutor:covet",
+    "tutor:earthpower",
+    "tutor:irontail",
+    "tutor:knockoff",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:stealthrock",
+    "tutor:bodyslam",
+    "tutor:superfang"
+  ],
+  "preEvolution": "sandshrew",
+  "evolutions": [],
+  "forms": [
+    {
+      "name": "Alola",
+      "primaryType": "ice",
+      "secondaryType": "steel",
+      "maleRatio": 0.5,
+      "height": 12,
+      "weight": 550,
+      "pokedex": [
+        "cobblemon.species.sandslash-alola.desc"
+      ],
+      "labels": [
+        "gen7",
+        "alolan_form"
+      ],
+      "aspects": [
+        "alolan"
+      ],
+      "abilities": [
+        "snowcloak",
+        "slushrush",
+        "h:icebody"
+      ],
+      "baseStats": {
+        "hp": 75,
+        "attack": 100,
+        "defence": 120,
+        "special_attack": 25,
+        "special_defence": 65,
+        "speed": 65
+      },
+      "moves": [
+        "1:counter",
+        "1:defensecurl",
+        "1:powdersnow",
+        "1:scratch",
+        "4:iceshard",
+        "7:metalclaw",
+        "10:furycutter",
+        "13:icywind",
+        "16:irondefense",
+        "19:avalanche",
+        "22:gyroball",
+        "23:fling",
+        "25:slash",
+        "25:nightslash",
+        "27:superfang",
+        "29:curse",
+        "32:spikes",
+        "35:iciclecrash",
+        "38:ironhead",
+        "42:tripleaxel",
+        "46:crushclaw",
+        "50:rapidspin",
+        "54:leechlife",
+        "58:swordsdance",
+        "58:focuspunch",
+        "62:auroraveil",
+
+        "egg:chipaway",
+        "egg:counter",
+        "egg:crushclaw",
+        "egg:endure",
+        "egg:flail",
+        "egg:honeclaws",
+        "egg:iceshard",
+        "egg:mirrorcoat",
+        "egg:nightslash",
+
+        "tm:honeclaws",
+        "tm:toxic",
+        "tm:hiddenpower",
+        "tm:snowscape",
+        "tm:hyperbeam",
+        "tm:protect",
+        "tm:frustration",
+        "tm:frostbreath",
+        "tm:return",
+        "tm:icespinner",
+        "tm:brickbreak",
+        "tm:hail",
+        "tm:rocktomb",
+        "tm:aerialace",
+        "tm:facade",
+        "tm:rest",
+        "tm:lowsweep",
+        "tm:focusblast",
+        "tm:shadowclaw",
+        "tm:gigaimpact",
+        "tm:smartstrike",
+        "tm:gyroball",
+        "tm:swordsdance",
+        "tm:avalanche",
+        "tm:ironhead",
+        "tm:xscissor",
+        "tm:workup",
+        "tm:poisonjab",
+        "tm:rockpolish",
+        "tm:substitute",
+        "tm:irondefense",
+        "tm:cut",
+        "tm:strength",
+        "tm:iceshard",
+        "tm:stompingtantrum",
+        "tm:thief",
+        "tm:iciclecrash",
+        "tm:rockpolish",
+
+        "tutor:covet",
+        "tutor:iciclespear",
+        "tutor:irontail",
+        "tutor:knockoff",
+        "tutor:sleeptalk",
+        "tutor:snore",
+        "tutor:stealthrock",
+        "tutor:bodyslam",
+        "tutor:superfang"
+      ],
+      "preEvolution": "sandshrew alolan",
+      "evolutions": [],
+      "battleOnly": false,
+      "behaviour": {
+        "moving": {
+          "swim": {
+            "avoidsWater": true
+          }
+        },
+        "combat": {
+          "willDefendSelf": true,
+          "willDefendOwner": true,
+          "willFlee": false
+        },
+        "resting": {
+          "drowsyChance": 0.0333,
+          "rouseChance": 0.0042
+        }
+      },
+      "drops": {
+        "amount": 5,
+        "entries": [
+          {
+            "item": "minecraft:armadillo_scute",
+            "quantityRange": "0-2"
+          },
+          {
+            "item": "cobblemon:grip_claw",
+            "percentage": 5
+          },
+          {
+            "item": "cobblemon:quick_claw",
+            "percentage": 5
+          },
+          {
+            "item": "cobblemon:chople_berry",
+            "percentage": 5
+          }
+        ]
+      }
+    }
+  ]
+}

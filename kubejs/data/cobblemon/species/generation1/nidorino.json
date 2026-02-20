@@ -1,0 +1,181 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 33,
+  "name": "Nidorino",
+  "primaryType": "poison",
+  "maleRatio": 1,
+  "height": 9,
+  "weight": 195,
+  "pokedex": [
+    "cobblemon.species.nidorino.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "hustle",
+    "poisonpoint",
+    "h:rivalry"
+  ],
+  "eggGroups": [
+    "monster",
+    "field"
+  ],
+  "baseStats": {
+    "hp": 61,
+    "attack": 72,
+    "defence": 57,
+    "special_attack": 55,
+    "special_defence": 55,
+    "speed": 65
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 2,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 128,
+  "experienceGroup": "medium_slow",
+  "catchRate": 120,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1,
+    "height": 0.9,
+    "fixed": false
+  },
+  "behaviour": {
+    "resting": {
+      "light": "0-4",
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "5",
+      "toleratedLeaders": [
+        {
+          "pokemon": "nidorino",
+          "tier": 1
+        },
+        {
+          "pokemon": "nidoking",
+          "tier": 2
+        }
+      ]
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "combat": {
+      "willDefendSelf": true,
+      "willDefendOwner": true,
+      "willFlee": false
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "cobblemon:poison_barb",
+        "percentage": 5
+      },
+      {
+        "item": "cobblemon:pecha_berry",
+        "percentage": 5
+      }
+    ]
+  },
+  "moves": [
+    "1:growl",
+    "1:poisonsting",
+    "1:scratch",
+    "1:tailwhip",
+    "4:peck",
+    "7:doublekick",
+    "10:furyattack",
+    "13:poisonfang",
+    "16:hornattack",
+    "20:helpinghand",
+    "23:focusenergy",
+    "26:poisonjab",
+    "29:beatup",
+    "32:bodyslam",
+    "36:crunch",
+    "40:smartstrike",
+    "44:poisontail",
+    "48:scorchingsands",
+    "52:takedown",
+    "56:suckerpunch",
+    "60:headsmash",
+
+    "egg:amnesia",
+    "egg:chipaway",
+    "egg:confusion",
+    "egg:counter",
+    "egg:disable",
+    "egg:endure",
+    "egg:headsmash",
+    "egg:horndrill",
+    "egg:supersonic",
+    "egg:thrash",
+    "egg:venomdrench",
+
+    "tm:honeclaws",
+    "tm:toxic",
+    "tm:venoshock",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:icebeam",
+    "tm:blizzard",
+    "tm:protect",
+    "tm:raindance",
+    "tm:frustration",
+    "tm:thunderbolt",
+    "tm:thunder",
+    "tm:return",
+    "tm:dig",
+    "tm:sludgebomb",
+    "tm:facade",
+    "tm:rest",
+    "tm:echoedvoice",
+    "tm:quash",
+    "tm:shadowclaw",
+    "tm:poisonjab",
+    "tm:substitute",
+    "tm:rocksmash",
+    "tm:cut",
+    "tm:strength",
+    "tm:reflect",
+    "tm:stompingtantrum",
+    "tm:thief",
+
+    "tutor:drillrun",
+    "tutor:helpinghand",
+    "tutor:irontail",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:toxicspikes",
+    "tutor:superfang"
+  ],
+  "preEvolution": "nidoranm",
+  "evolutions": [
+    {
+      "id": "nidorino_nidoking",
+      "variant": "item_interact",
+      "result": "nidoking",
+      "consumeHeldItem": false,
+      "learnableMoves": [
+        "megahorn"
+      ],
+      "requirements": [],
+      "requiredContext": "cobblemon:moon_stone"
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 20,
+  "name": "Raticate",
+  "primaryType": "normal",
+  "maleRatio": 0.5,
+  "height": 7,
+  "weight": 185,
+  "pokedex": [
+    "cobblemon.species.raticate.desc"
+  ],
+  "labels": [
+    "gen1",
+    "kantonian_form"
+  ],
+  "aspects": [],
+  "abilities": [
+    "hustle",
+    "guts",
+    "h:runaway"
+  ],
+  "eggGroups": [
+    "field"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "attack": 92,
+    "defence": 60,
+    "special_attack": 50,
+    "special_defence": 70,
+    "speed": 108
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 2
+  },
+  "baseExperienceYield": 145,
+  "experienceGroup": "medium_fast",
+  "catchRate": 127,
+  "eggCycles": 15,
+  "baseFriendship": 50,
+  "features": [
+    "alolan"
+  ],
+  "baseScale": 0.8,
+  "hitbox": {
+    "width": 0.7,
+    "height": 1.1,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.33
+      },
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "7"
+    },
+    "combat": {
+      "willDefendOwner": true
+    }
+  },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "minecraft:rotten_flesh",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "cobblemon:chilan_berry",
+        "percentage": 5
+      }
+    ]
+  },
+  "moves": [
+    "1:bite",
+    "1:mefirst",
+    "1:revenge",
+    "1:tackle",
+    "4:focusenergy",
+    "7:screech",
+    "10:quickattack",
+    "13:pursuit",
+    "16:assurance",
+    "19:furyswipes",
+    "20:afteryou",
+    "23:endeavor",
+    "26:firefang",
+    "26:icefang",
+    "26:thunderfang",
+    "29:hyperfang",
+    "32:crunch",
+    "36:takedown",
+    "40:flamewheel",
+    "44:zenheadbutt",
+    "48:reversal",
+    "52:suckerpunch",
+    "56:doubleedge",
+    "60:lastresort",
+    "64:finalgambit",
+
+    "egg:counter",
+    "egg:swagger",
+    "egg:stockpile",
+    "egg:swallow",
+
+    "tm:honeclaws",
+    "tm:roar",
+    "tm:toxic",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:taunt",
+    "tm:icebeam",
+    "tm:blizzard",
+    "tm:hyperbeam",
+    "tm:protect",
+    "tm:raindance",
+    "tm:frustration",
+    "tm:thunderbolt",
+    "tm:thunder",
+    "tm:return",
+    "tm:dig",
+    "tm:shadowball",
+    "tm:facade",
+    "tm:rest",
+    "tm:poweruppunch",
+    "tm:chargebeam",
+    "tm:quash",
+    "tm:retaliate",
+    "tm:gigaimpact",
+    "tm:thunderwave",
+    "tm:swordsdance",
+    "tm:workup",
+    "tm:grassknot",
+    "tm:rockclimb",
+    "tm:pluck",
+    "tm:uturn",
+    "tm:substitute",
+    "tm:wildcharge",
+    "tm:rocksmash",
+    "tm:cut",
+    "tm:strength",
+    "tm:scaryface",
+    "tm:tailwhip",
+    "tm:closecombat",
+    "tm:sludgebomb",
+    "tm:stompingtantrum",
+    "tm:temperflare",
+    "tm:thief",
+
+    "tutor:covet",
+    "tutor:endeavor",
+    "tutor:icywind",
+    "tutor:irontail",
+    "tutor:lastresort",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:superfang",
+    "tutor:uproar",
+    "tutor:bodyslam",
+    "tutor:psychicfangs",
+    "tutor:zenheadbutt"
+  ],
+  "preEvolution": "rattata",
+  "evolutions": [],
+  "forms": [
+    {
+      "name": "Alola",
+      "primaryType": "dark",
+      "maleRatio": 0.5,
+      "height": 7,
+      "weight": 255,
+      "pokedex": [
+        "cobblemon.species.raticate-alola.desc"
+      ],
+      "labels": [
+        "gen7",
+        "alolan_form"
+      ],
+      "aspects": [
+        "alolan"
+      ],
+      "abilities": [
+        "thickfat",
+        "hustle",
+        "h:gluttony"
+      ],
+      "baseStats": {
+        "hp": 80,
+        "attack": 73,
+        "defence": 85,
+        "special_attack": 40,
+        "special_defence": 85,
+        "speed": 77
+      },
+      "drops": {
+        "amount": 3,
+        "entries": [
+          {
+            "item": "minecraft:rotten_flesh",
+            "quantityRange": "0-2"
+          },
+          {
+            "item": "cobblemon:pecha_berry",
+            "percentage": 5
+          }
+        ]
+      },
+      "moves": [
+        "1:bite",
+        "1:mefirst",
+        "1:revenge",
+        "1:feintattack",
+        "4:focusenergy",
+        "7:snarl",
+        "10:quickattack",
+        "13:pursuit",
+        "16:assurance",
+        "19:furyswipes",
+        "20:afteryou",
+        "23:taunt",
+        "26:firefang",
+        "26:icefang",
+        "26:thunderfang",
+        "29:hyperfang",
+        "32:crunch",
+        "36:payback",
+        "40:flamewheel",
+        "44:zenheadbutt",
+        "48:reversal",
+        "52:suckerpunch",
+        "56:throatchop",
+        "60:lastresort",
+        "64:finalgambit",
+
+        "egg:counter",
+        "egg:swagger",
+        "egg:stockpile",
+        "egg:swallow",
+
+        "tm:honeclaws",
+        "tm:roar",
+        "tm:toxic",
+        "tm:hiddenpower",
+        "tm:sunnyday",
+        "tm:endeavor",
+        "tm:icebeam",
+        "tm:blizzard",
+        "tm:hyperbeam",
+        "tm:protect",
+        "tm:raindance",
+        "tm:frustration",
+        "tm:thunderbolt",
+        "tm:thunder",
+        "tm:return",
+        "tm:dig",
+        "tm:shadowball",
+        "tm:facade",
+        "tm:rest",
+        "tm:poweruppunch",
+        "tm:chargebeam",
+        "tm:quash",
+        "tm:retaliate",
+        "tm:gigaimpact",
+        "tm:thunderwave",
+        "tm:swordsdance",
+        "tm:workup",
+        "tm:grassknot",
+        "tm:rockclimb",
+        "tm:pluck",
+        "tm:uturn",
+        "tm:substitute",
+        "tm:wildcharge",
+        "tm:rocksmash",
+        "tm:cut",
+        "tm:strength",
+        "tm:scaryface",
+        "tm:tailwhip",
+        "tm:closecombat",
+        "tm:sludgebomb",
+        "tm:stompingtantrum",
+        "tm:temperflare",
+        "tm:thief",
+        "tm:doubleedge",
+
+        "tutor:covet",
+        "tutor:endeavor",
+        "tutor:icywind",
+        "tutor:irontail",
+        "tutor:lastresort",
+        "tutor:sleeptalk",
+        "tutor:snore",
+        "tutor:superfang",
+        "tutor:uproar",
+        "tutor:bodyslam",
+        "tutor:psychicfangs",
+        "tutor:zenheadbutt"
+      ],
+      "preEvolution": "rattata alolan",
+      "evolutions": [],
+      "battleOnly": false,
+      "behaviour": {
+        "herd": {
+          "maxSize": "7"
+        },
+        "resting": {
+          "times": [
+            "day"
+          ],
+          "drowsyChance": 0.0033,
+          "rouseChance": 0.0042
+        },
+        "moving": {
+          "swim": {
+            "avoidsWater": true
+          }
+        },
+        "combat": {
+          "willDefendOwner": true
+        }
+      }
+    }
+  ]
+}

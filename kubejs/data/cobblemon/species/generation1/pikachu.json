@@ -1,0 +1,346 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 25,
+  "name": "Pikachu",
+  "primaryType": "electric",
+  "maleRatio": 0.5,
+  "height": 4,
+  "weight": 60,
+  "pokedex": [
+    "cobblemon.species.pikachu.desc"
+  ],
+  "labels": [
+    "gen1",
+    "kantonian_form"
+  ],
+  "aspects": [],
+  "abilities": [
+    "static",
+    "lightningrod",
+    "h:lightningrod"
+  ],
+  "eggGroups": [
+    "field",
+    "fairy"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "attack": 65,
+    "defence": 40,
+    "special_attack": 65,
+    "special_defence": 40,
+    "speed": 100
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 2
+  },
+  "baseExperienceYield": 112,
+  "experienceGroup": "medium_fast",
+  "catchRate": 190,
+  "eggCycles": 10,
+  "baseFriendship": 50,
+  "features": [
+    "alolan",
+    "region_bias"
+  ],
+  "shoulderMountable": true,
+  "baseScale": 0.5,
+  "hitbox": {
+    "width": 0.7,
+    "height": 1.3,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.15
+      },
+      "swim": {
+        "swimSpeed": 0.15,
+        "avoidsWater": true
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "light": "0-4",
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "5",
+      "toleratedLeaders": [
+        {
+          "pokemon": "pikachu",
+          "tier": 1
+        },
+        {
+          "pokemon": "morpeko",
+          "tier": 1
+        },
+        {
+          "pokemon": "raichu",
+          "tier": 2
+        }
+      ]
+    },
+    "combat": {
+      "willDefendOwner": true
+    }
+  },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "cobblemon:light_ball",
+        "percentage": 5
+      },
+      {
+        "item": "cobblemon:thunder_stone",
+        "percentage": 5
+      },
+      {
+        "item": "cobblemon:oran_berry",
+        "percentage": 5
+      }
+    ]
+  },
+  "moves": [
+    "1:quickattack",
+    "1:refresh",
+    "1:yawn",
+    "3:charge",
+    "6:sing",
+    "8:tickle",
+    "10:disarmingvoice",
+    "12:spark",
+    "14:wish",
+    "16:thunderwave",
+    "18:doublekick",
+    "21:nuzzle",
+    "24:electroball",
+    "27:irontail",
+    "30:agility",
+    "34:thunderbolt",
+    "38:teeterdance",
+    "42:playrough",
+    "46:discharge",
+    "50:extremespeed",
+    "54:heartstamp",
+    "58:drainingkiss",
+    "58:iciclecrash",
+    "58:meteormash",
+    "62:volttackle",
+
+    "egg:bestow",
+    "egg:bide",
+    "egg:charge",
+    "egg:doubleslap",
+    "egg:electricterrain",
+    "egg:encore",
+    "egg:endure",
+    "egg:fakeout",
+    "egg:flail",
+    "egg:luckychant",
+    "egg:present",
+    "egg:reversal",
+    "egg:tickle",
+    "egg:wish",
+
+    "tm:toxic",
+    "tm:hiddenpower",
+    "tm:lightscreen",
+    "tm:protect",
+    "tm:raindance",
+    "tm:frustration",
+    "tm:thunderbolt",
+    "tm:thunder",
+    "tm:return",
+    "tm:dig",
+    "tm:brickbreak",
+    "tm:facade",
+    "tm:rest",
+    "tm:echoedvoice",
+    "tm:chargebeam",
+    "tm:flash",
+    "tm:voltswitch",
+    "tm:thunderwave",
+    "tm:playrough",
+    "tm:grassknot",
+    "tm:substitute",
+    "tm:wildcharge",
+    "tm:rocksmash",
+    "tm:cut",
+    "tm:fly",
+    "tm:surf",
+    "tm:strength",
+    "tm:babydolleyes",
+    "tm:fakeout",
+    "tm:feint",
+    "tm:zippyzap",
+    "tm:reflect",
+    "tm:risingvoltage",
+    "tm:thief",
+    
+    "tutor:covet",
+    "tutor:helpinghand",
+    "tutor:irontail",
+    "tutor:knockoff",
+    "tutor:magnetrise",
+    "tutor:signalbeam",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:alluringvoice",
+    "tutor:bodyslam",
+    "tutor:calmmind",
+    "tutor:focuspunch",
+    "tutor:nastyplot",
+    "tutor:trailblaze",
+    "tutor:thunderpunch"
+  ],
+  "preEvolution": "pichu",
+  "evolutions": [
+    {
+      "id": "pikachu_raichu",
+      "variant": "item_interact",
+      "result": "raichu",
+      "consumeHeldItem": false,
+      "learnableMoves": [
+        "thunderclap"
+      ],
+      "requirements": [
+        {
+          "variant": "biome",
+          "biomeAnticondition": "#cobblemon:evolution/regional/pikachu_alolabiome"
+        }
+      ],
+      "requiredContext": "cobblemon:thunder_stone"
+    },
+    {
+      "id": "pikachu_raichualola",
+      "variant": "item_interact",
+      "result": "raichu alolan",
+      "consumeHeldItem": false,
+      "learnableMoves": [
+        "psychic"
+      ],
+      "requirements": [
+        {
+          "variant": "biome",
+          "biomeCondition": "#cobblemon:evolution/regional/pikachu_alolabiome"
+        },
+        {
+          "variant": "biome",
+          "biomeAnticondition": "#cobblemon:evolution/regional/pikachu_kantobiome"
+        }
+      ],
+      "requiredContext": "cobblemon:thunder_stone"
+    }
+  ],
+  "forms": [
+    {
+      "name": "Partner",
+      "primaryType": "electric",
+      "maleRatio": 1,
+      "height": 4,
+      "weight": 60,
+      "pokedex": [
+        "cobblemon.species.pikachu-partner.desc"
+      ],
+      "labels": [
+        "gen7"
+      ],
+      "aspects": [
+        "partner-cap"
+      ],
+      "eggGroups": [
+        "undiscovered"
+      ],
+      "evolutions": [],
+      "battleOnly": false
+    },
+    {
+      "name": "Gmax",
+      "primaryType": "electric",
+      "maleRatio": 0.5,
+      "height": 210,
+      "weight": 0,
+      "pokedex": [
+        "cobblemon.species.pikachu-gmax.desc"
+      ],
+      "labels": [
+        "gen8",
+        "gmax"
+      ],
+      "aspects": [
+        "gmax"
+      ],
+      "dynamaxBlocked": true,
+      "evolutions": [],
+      "battleOnly": true
+    },
+    {
+      "name": "Alola-Bias",
+      "primaryType": "electric",
+      "maleRatio": 0.5,
+      "height": 4,
+      "weight": 60,
+      "pokedex": [
+        "cobblemon.species.pikachu-alolabias.desc"
+      ],
+      "labels": [
+        "gen7",
+        "customized_official",
+        "alolan_form"
+      ],
+      "aspects": [
+        "region-bias-alola"
+      ],
+      "dynamaxBlocked": false,
+      "preEvolution": "pichu",
+      "evolutions": [
+        {
+          "id": "pikachu_raichu",
+          "variant": "item_interact",
+          "result": "raichu",
+          "consumeHeldItem": false,
+          "learnableMoves": [
+            "thunderpunch"
+          ],
+          "requirements": [
+            {
+              "variant": "biome",
+              "biomeAnticondition": "#cobblemon:evolution/regional/pikachu_alolabiome"
+            },
+            {
+              "variant": "biome",
+              "biomeCondition": "#cobblemon:evolution/regional/pikachu_kantobiome"
+            }
+          ],
+          "requiredContext": "cobblemon:thunder_stone"
+        },
+        {
+          "id": "pikachu_raichualola",
+          "variant": "item_interact",
+          "result": "raichu alolan",
+          "consumeHeldItem": false,
+          "learnableMoves": [
+            "psychic"
+          ],
+          "requirements": [
+            {
+              "variant": "biome",
+              "biomeAnticondition": "#cobblemon:evolution/regional/pikachu_kantobiome"
+            }
+          ],
+          "requiredContext": "cobblemon:thunder_stone"
+        }
+      ]
+    }
+  ]
+}

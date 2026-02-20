@@ -1,0 +1,243 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 31,
+  "name": "Nidoqueen",
+  "primaryType": "poison",
+  "secondaryType": "ground",
+  "maleRatio": 0,
+  "height": 13,
+  "weight": 600,
+  "pokedex": [
+    "cobblemon.species.nidoqueen.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "sheerforce",
+    "poisonpoint",
+    "h:rivalry"
+  ],
+  "eggGroups": [
+    "undiscovered"
+  ],
+  "baseStats": {
+    "hp": 90,
+    "attack": 92,
+    "defence": 87,
+    "special_attack": 75,
+    "special_defence": 85,
+    "speed": 76
+  },
+  "evYield": {
+    "hp": 3,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 253,
+  "experienceGroup": "medium_slow",
+  "catchRate": 45,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1.2,
+  "hitbox": {
+    "width": 1.2,
+    "height": 1.6,
+    "fixed": false
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "7",
+      "toleratedLeaders": [
+        {
+          "pokemon": "nidoqueen",
+          "tier": 1
+        },
+        {
+          "pokemon": "nidoking",
+          "tier": 2
+        }
+      ]
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "combat": {
+      "willDefendSelf": true,
+      "willDefendOwner": true,
+      "willFlee": false
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "cobblemon:poison_barb",
+        "percentage": 10
+      },
+      {
+        "item": "cobblemon:pecha_berry",
+        "percentage": 10
+      }
+    ]
+  },
+  "moves": [
+    "1:avalanche",
+    "1:disable",
+    "1:fling",
+    "1:helpinghand",
+    "1:highhorsepower",
+    "1:moonblast",
+    "1:moonlight",
+    "1:playrough",
+    "1:poisonsting",
+    "1:toxicspikes",
+    "23:chipaway",
+    "32:bodyslam",
+    "35:poisontail",
+    "41:earthpower",
+    "45:seismictoss",
+    "58:superpower",
+    "58:scorchingsands",
+
+    "egg:beatup",
+    "egg:charm",
+    "egg:counter",
+    "egg:endure",
+    "egg:focusenergy",
+    "egg:pursuit",
+    "egg:skullbash",
+    "egg:supersonic",
+    "egg:takedown",
+    "egg:venomdrench",
+
+    "tm:honeclaws",
+    "tm:roar",
+    "tm:toxic",
+    "tm:venoshock",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:taunt",
+    "tm:icebeam",
+    "tm:blizzard",
+    "tm:hyperbeam",
+    "tm:protect",
+    "tm:raindance",
+    "tm:frustration",
+    "tm:smackdown",
+    "tm:thunderbolt",
+    "tm:thunder",
+    "tm:earthquake",
+    "tm:return",
+    "tm:dig",
+    "tm:shadowball",
+    "tm:brickbreak",
+    "tm:sludgewave",
+    "tm:flamethrower",
+    "tm:sludgebomb",
+    "tm:sandstorm",
+    "tm:fireblast",
+    "tm:rocktomb",
+    "tm:aerialace",
+    "tm:facade",
+    "tm:rest",
+    "tm:poweruppunch",
+    "tm:lowsweep",
+    "tm:echoedvoice",
+    "tm:focusblast",
+    "tm:quash",
+    "tm:shadowclaw",
+    "tm:gigaimpact",
+    "tm:stoneedge",
+    "tm:bulldoze",
+    "tm:rockslide",
+    "tm:dragontail",
+    "tm:poisonjab",
+    "tm:rockclimb",
+    "tm:substitute",
+    "tm:rocksmash",
+    "tm:cut",
+    "tm:surf",
+    "tm:strength",
+    "tm:aurasphere",
+    "tm:bodypress",
+    "tm:highhorsepower",
+    "tm:reflect",
+    "tm:scaleshot",
+    "tm:stompingtantrum",
+    "tm:thief",
+
+    "tutor:aquatail",
+    "tutor:dragonpulse",
+    "tutor:earthpower",
+    "tutor:firepunch",
+    "tutor:helpinghand",
+    "tutor:icepunch",
+    "tutor:icywind",
+    "tutor:irontail",
+    "tutor:outrage",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:stealthrock",
+    "tutor:superfang",
+    "tutor:superpower",
+    "tutor:thunderpunch",
+    "tutor:drillrun",
+    "tutor:focuspunch",
+    "tutor:hex",
+    "tutor:rockblast",
+    "tutor:uproar"
+  ],
+  "preEvolution": "nidorina",
+  "evolutions": [],
+  "riding": {
+    "stats": {
+      "SPEED": {
+        "ranges": {
+          "LAND": "25-50",
+          "LIQUID": "5-20"
+        }
+      },
+      "ACCELERATION": {
+        "ranges": {
+          "LAND": "20-70",
+          "LIQUID": "50-80"
+        }
+      },
+      "SKILL": {
+        "ranges": {
+          "LAND": "15-30",
+          "LIQUID": "20-40"
+        }
+      },
+      "JUMP": {
+        "ranges": {
+          "LAND": "5-10",
+          "LIQUID": "5-10"
+        }
+      },
+      "STAMINA": {
+        "ranges": {
+          "LAND": "30-60",
+          "LIQUID": "25-65"
+        }
+      }
+    },
+    "seats": [],
+    "behaviour": {
+      "key": "cobblemon:land/horse"
+    }
+  }
+}

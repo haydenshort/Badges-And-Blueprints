@@ -1,0 +1,151 @@
+{
+  "name": "Brock",
+  "ai": {
+    "type": "rct",
+    "data": {
+      "maxSelectMargin": 0.15
+    }
+  },
+  "battleRules": {
+    "maxItemUses": 2
+  },
+  "bag": [
+    {
+      "item": "cobblemon:potion",
+      "quantity": 2
+    }
+  ],
+  "team": [
+    {
+      "species": "golem",
+      "gender": "MALE",
+      "level": 15,
+      "nature": "adamant",
+      "ability": "sturdy",
+      "moveset": [
+        "wildcharge",
+        "earthquake",
+        "firepunch",
+        "explosion"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 30,
+        "def": 28,
+        "spa": 0,
+        "spd": 28,
+        "spe": 30
+      },
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": [
+        "custap_berry"
+      ],
+      "aspects": [
+        "alolan"
+      ]
+    },
+    {
+      "species": "kabuto",
+      "gender": "GENDERLESS",
+      "level": 15,
+      "nature": "careful",
+      "ability": "weakarmor",
+      "moveset": [
+        "rapidspin",
+        "stealthrock",
+        "knockoff",
+        "waterfall"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 31,
+        "def": 31,
+        "spa": 0,
+        "spd": 28,
+        "spe": 30
+      },
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": [
+        "eviolite"
+      ]
+    },
+    {
+      "species": "omanyte",
+      "gender": "GENDERLESS",
+      "level": 15,
+      "nature": "modest",
+      "ability": "shellarmor",
+      "moveset": [
+        "shellsmash",
+        "surf",
+        "icebeam",
+        "earthpower"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 0,
+        "def": 28,
+        "spa": 31,
+        "spd": 28,
+        "spe": 30
+      },
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": [
+        "eviolite"
+      ]
+    },
+    {
+      "species": "aerodactyl",
+      "gender": "GENDERLESS",
+      "level": 15,
+      "nature": "jolly",
+      "ability": "unnerve",
+      "moveset": [
+        "stoneedge",
+        "earthquake",
+        "dualwingbeat",
+        "roost"
+      ],
+      "ivs": {
+        "hp": 28,
+        "atk": 31,
+        "def": 20,
+        "spa": 0,
+        "spd": 20,
+        "spe": 31
+      },
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "heldItem": [
+        "life_orb"
+      ]
+    }
+  ]
+}

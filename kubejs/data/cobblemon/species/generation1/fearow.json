@@ -1,0 +1,211 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 22,
+  "name": "Fearow",
+  "primaryType": "flying",
+  "maleRatio": 0.5,
+  "height": 12,
+  "weight": 380,
+  "pokedex": [
+    "cobblemon.species.fearow.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "intimidate",
+    "technician",
+    "h:sniper"
+  ],
+  "eggGroups": [
+    "flying"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "attack": 95,
+    "defence": 80,
+    "special_attack": 61,
+    "special_defence": 64,
+    "speed": 100
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 2
+  },
+  "baseExperienceYield": 155,
+  "experienceGroup": "medium_fast",
+  "catchRate": 90,
+  "eggCycles": 15,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1.35,
+    "height": 2,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "fly": {
+        "canFly": true
+      },
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "resting": {
+      "light": "0-4",
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "9",
+      "toleratedLeaders": [
+        {
+          "pokemon": "fearow",
+          "tier": 1
+        }
+      ]
+    },
+    "combat": {
+      "willDefendSelf": true,
+      "willDefendOwner": true,
+      "willFlee": false
+    }
+  },
+  "drops": {
+    "amount": 5,
+    "entries": [
+      {
+        "item": "minecraft:feather",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "minecraft:chicken"
+      },
+      {
+        "item": "cobblemon:sharp_beak",
+        "percentage": 5
+      },
+      {
+        "item": "cobblemon:charti_berry",
+        "percentage": 5
+      }
+    ]
+  },
+  "moves": [
+    "1:dualwingbeat",
+    "1:growl",
+    "1:leer",
+    "1:peck",
+    "4:astonish",
+    "7:quickattack",
+    "10:furyattack",
+    "13:aircutter",
+    "16:mirrormove",
+    "19:aerialace",
+    "20:pursuit",
+    "23:takedown",
+    "26:featherdance",
+    "29:focusenergy",
+    "32:agility",
+    "35:steelwing",
+    "38:drillpeck",
+    "41:whirlwind",
+    "44:detect",
+    "48:tailwind",
+    "52:doubleedge",
+    "56:skyattack",
+    "60:bravebird",
+
+    "egg:astonish",
+    "egg:feintattack",
+    "egg:razorwind",
+    "egg:scaryface",
+    "egg:skyattack",
+    "egg:triattack",
+    "egg:whirlwind",
+
+    "tm:honeclaws",
+    "tm:toxic",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:taunt",
+    "tm:hyperbeam",
+    "tm:protect",
+    "tm:raindance",
+    "tm:triattack",
+    "tm:frustration",
+    "tm:return",
+    "tm:aerialace",
+    "tm:facade",
+    "tm:rest",
+    "tm:echoedvoice",
+    "tm:falseswipe",
+    "tm:hurricane",
+    "tm:quash",
+    "tm:shadowclaw",
+    "tm:gigaimpact",
+    "tm:workup",
+    "tm:pluck",
+    "tm:uturn",
+    "tm:substitute",
+    "tm:snarl",
+    "tm:cut",
+    "tm:fly",
+    "tm:thief",
+
+    "tutor:drillrun",
+    "tutor:heatwave",
+    "tutor:roost",
+    "tutor:skyattack",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:tailwind",
+    "tutor:uproar"
+  ],
+  "preEvolution": "spearow",
+  "evolutions": [],
+  "riding": {
+    "stats": {
+      "SPEED": {
+        "ranges": {
+          "LAND": "10-20",
+          "AIR": "30-74"
+        }
+      },
+      "ACCELERATION": {
+        "ranges": {
+          "LAND": "5-100",
+          "AIR": "25-60"
+        }
+      },
+      "SKILL": {
+        "ranges": {
+          "LAND": "15-30",
+          "AIR": "30-50"
+        }
+      },
+      "JUMP": {
+        "ranges": {
+          "LAND": "10-20",
+          "AIR": "25-50"
+        }
+      },
+      "STAMINA": {
+        "ranges": {
+          "LAND": "15-30",
+          "AIR": "25-60"
+        }
+      }
+    },
+    "seats": [],
+    "behaviour": {
+      "key": "cobblemon:land/horse"
+    }
+  }
+}

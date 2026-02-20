@@ -1,0 +1,209 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 34,
+  "name": "Nidoking",
+  "primaryType": "poison",
+  "secondaryType": "ground",
+  "maleRatio": 1,
+  "height": 14,
+  "weight": 620,
+  "pokedex": [
+    "cobblemon.species.nidoking.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "sheerforce",
+    "poisonpoint",
+    "h:rivalry"
+  ],
+  "eggGroups": [
+    "monster",
+    "field"
+  ],
+  "baseStats": {
+    "hp": 81,
+    "attack": 102,
+    "defence": 77,
+    "special_attack": 85,
+    "special_defence": 75,
+    "speed": 85
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 3,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 253,
+  "experienceGroup": "medium_slow",
+  "catchRate": 45,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 0.9,
+  "hitbox": {
+    "width": 1.5,
+    "height": 2.25,
+    "fixed": false
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "7",
+      "toleratedLeaders": [
+        {
+          "pokemon": "nidoking",
+          "tier": 1
+        },
+        {
+          "pokemon": "nidoqueen",
+          "tier": 2
+        }
+      ]
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "combat": {
+      "willDefendSelf": true,
+      "willDefendOwner": true,
+      "willFlee": false
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "cobblemon:poison_barb",
+        "percentage": 10
+      },
+      {
+        "item": "cobblemon:pecha_berry",
+        "percentage": 10
+      }
+    ]
+  },
+  "moves": [
+    "1:avalanche",
+    "1:beatup",
+    "1:confusion",
+    "1:disable",
+    "1:headsmash",
+    "1:highhorsepower",
+    "1:morningsun",
+    "1:playrough",
+    "1:poisonsting",
+    "1:smartstrike",
+    "25:chipaway",
+    "32:thrash",
+    "35:poisontail",
+    "41:earthpower",
+    "45:megahorn",
+    "58:superpower",
+    "58:scorchingsands",
+
+    "egg:amnesia",
+    "egg:beatup",
+    "egg:confusion",
+    "egg:counter",
+    "egg:disable",
+    "egg:endure",
+    "egg:headsmash",
+    "egg:suckerpunch",
+    "egg:supersonic",
+    "egg:takedown",
+    "egg:venomdrench",
+
+    "tm:honeclaws",
+    "tm:roar",
+    "tm:toxic",
+    "tm:venoshock",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:taunt",
+    "tm:icebeam",
+    "tm:blizzard",
+    "tm:hyperbeam",
+    "tm:protect",
+    "tm:raindance",
+    "tm:frustration",
+    "tm:smackdown",
+    "tm:thunderbolt",
+    "tm:thunder",
+    "tm:earthquake",
+    "tm:return",
+    "tm:dig",
+    "tm:shadowball",
+    "tm:brickbreak",
+    "tm:sludgewave",
+    "tm:flamethrower",
+    "tm:sludgebomb",
+    "tm:sandstorm",
+    "tm:fireblast",
+    "tm:rocktomb",
+    "tm:facade",
+    "tm:rest",
+    "tm:poweruppunch",
+    "tm:lowsweep",
+    "tm:echoedvoice",
+    "tm:focusblast",
+    "tm:incinerate",
+    "tm:quash",
+    "tm:shadowclaw",
+    "tm:gigaimpact",
+    "tm:stoneedge",
+    "tm:bulldoze",
+    "tm:rockslide",
+    "tm:dragontail",
+    "tm:poisonjab",
+    "tm:playrough",
+    "tm:rockclimb",
+    "tm:substitute",
+    "tm:rocksmash",
+    "tm:cut",
+    "tm:surf",
+    "tm:strength",
+    "tm:aurasphere",
+    "tm:bodypress",
+    "tm:reflect",
+    "tm:scaleshot",
+    "tm:stompingtantrum",
+    "tm:thief",
+    
+    "tutor:aquatail",
+    "tutor:dragonpulse",
+    "tutor:drillrun",
+    "tutor:earthpower",
+    "tutor:firepunch",
+    "tutor:helpinghand",
+    "tutor:icepunch",
+    "tutor:icywind",
+    "tutor:irontail",
+    "tutor:outrage",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:stealthrock",
+    "tutor:superfang",
+    "tutor:superpower",
+    "tutor:thunderpunch",
+    "tutor:bodyslam",
+    "tutor:focuspunch",
+    "tutor:hex",
+    "tutor:rockblast",
+    "tutor:toxicspikes",
+    "tutor:uproar"
+  ],
+  "preEvolution": "nidorino",
+  "evolutions": []
+}

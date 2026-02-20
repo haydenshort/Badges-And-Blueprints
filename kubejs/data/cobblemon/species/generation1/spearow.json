@@ -1,0 +1,180 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 21,
+  "name": "Spearow",
+  "primaryType": "flying",
+  "maleRatio": 0.5,
+  "height": 3,
+  "weight": 20,
+  "pokedex": [
+    "cobblemon.species.spearow.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "intimidate",
+    "technician",
+    "h:sniper"
+  ],
+  "eggGroups": [
+    "flying"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "attack": 60,
+    "defence": 40,
+    "special_attack": 31,
+    "special_defence": 31,
+    "speed": 70
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 1
+  },
+  "baseExperienceYield": 52,
+  "experienceGroup": "medium_fast",
+  "catchRate": 255,
+  "eggCycles": 15,
+  "baseFriendship": 50,
+  "shoulderMountable": true,
+  "baseScale": 0.7,
+  "hitbox": {
+    "width": 0.7,
+    "height": 1,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "fly": {
+        "canFly": true
+      },
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "resting": {
+      "light": "0-4",
+      "willSleepOnBed": true,
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "9",
+      "toleratedLeaders": [
+        {
+          "pokemon": "spearow",
+          "tier": 1
+        },
+        {
+          "pokemon": "fearow",
+          "tier": 2
+        }
+      ]
+    },
+    "combat": {
+      "willDefendOwner": true
+    }
+  },
+  "drops": {
+    "amount": 4,
+    "entries": [
+      {
+        "item": "minecraft:feather",
+        "quantityRange": "0-1"
+      },
+      {
+        "item": "minecraft:chicken"
+      },
+      {
+        "item": "cobblemon:sharp_beak",
+        "percentage": 2.5
+      },
+      {
+        "item": "cobblemon:charti_berry",
+        "percentage": 2.5
+      }
+    ]
+  },
+  "moves": [
+    "1:peck",
+    "1:growl",
+    "1:leer",
+    "4:astonish",
+    "7:quickattack",
+    "10:furyattack",
+    "13:aircutter",
+    "16:mirrormove",
+    "19:aerialace",
+    "22:assurance",
+    "25:featherdance",
+    "28:focusenergy",
+    "31:agility",
+    "34:takedown",
+    "38:drillpeck",
+    "42:detect",
+    "46:tailwind",
+    "50:doubleedge",
+    "54:skyattack",
+
+    "egg:feintattack",
+    "egg:razorwind",
+    "egg:scaryface",
+    "egg:skyattack",
+    "egg:steelwing",
+    "egg:triattack",
+    "egg:whirlwind",
+
+    "tm:toxic",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:protect",
+    "tm:raindance",
+    "tm:triattack",
+    "tm:frustration",
+    "tm:return",
+    "tm:aerialace",
+    "tm:facade",
+    "tm:rest",
+    "tm:echoedvoice",
+    "tm:falseswipe",
+    "tm:hurricane",
+    "tm:workup",
+    "tm:pluck",
+    "tm:uturn",
+    "tm:substitute",
+    "tm:fly",
+    "tm:bravebird",
+    "tm:dualwingbeat",
+    "tm:steelwing",
+
+    "tutor:drillrun",
+    "tutor:heatwave",
+    "tutor:roost",
+    "tutor:skyattack",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:tailwind",
+    "tutor:uproar"
+  ],
+  "evolutions": [
+    {
+      "id": "spearow_fearow",
+      "variant": "level_up",
+      "result": "fearow",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 21
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,583 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 6,
+  "name": "Charizard",
+  "primaryType": "fire",
+  "secondaryType": "flying",
+  "maleRatio": 0.875,
+  "height": 17,
+  "weight": 905,
+  "pokedex": [
+    "cobblemon.species.charizard.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "defiant",
+    "blaze",
+    "h:solarpower"
+  ],
+  "eggGroups": [
+    "monster",
+    "dragon"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "attack": 101,
+    "defence": 75,
+    "special_attack": 109,
+    "special_defence": 75,
+    "speed": 100
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 3,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 267,
+  "experienceGroup": "medium_slow",
+  "catchRate": 45,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "height": 2.65,
+    "fixed": false,
+    "width": 1.5
+  },
+  "riding": {
+    "behaviours": {
+      "AIR": {
+        "key": "cobblemon:air/bird",
+        "rideSounds": [
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": true,
+            "soundLocation": "cobblemon:ride.loop.wind",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          },
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": true,
+            "soundLocation": "cobblemon:ride.loop.leather",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          }
+        ],
+        "stats": {
+          "ACCELERATION": "45-75",
+          "JUMP": "30-65",
+          "SKILL": "55-85",
+          "SPEED": "30-65",
+          "STAMINA": "30-65"
+        }
+      },
+      "LAND": {
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "stats": {
+          "ACCELERATION": "55-65",
+          "JUMP": "15-25",
+          "SKILL": "10-25",
+          "SPEED": "25-40",
+          "STAMINA": "20-30"
+        }
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "poseOffsets": [
+          {
+            "offset": {
+              "x": 0.0047415113,
+              "y": -1.6152971,
+              "z": 0.35461712
+            },
+            "poseTypes": [
+              "STAND"
+            ]
+          },
+          {
+            "offset": {
+              "x": -0.003806442,
+              "y": -1.7203209,
+              "z": 0.12983066
+            },
+            "poseTypes": [
+              "WALK"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.039005388,
+              "y": -2.4511793,
+              "z": 0.10381147
+            },
+            "poseTypes": [
+              "HOVER"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.056267936,
+              "y": -2.0914204,
+              "z": -0.45272845
+            },
+            "poseTypes": [
+              "FLY"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0,
+              "y": -0.7674751,
+              "z": -0.27694723
+            },
+            "poseTypes": [
+              "FLOAT"
+            ]
+          },
+          {
+            "offset": {
+              "x": -0.003806442,
+              "y": -1.7203209,
+              "z": 0.12983066
+            },
+            "poseTypes": [
+              "SWIM"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.0047415113,
+              "y": -1.6152971,
+              "z": 0.35461712
+            },
+            "poseTypes": [
+              "GLIDE"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "behaviour": {
+    "combat": {
+      "willDefendOwner": true,
+      "willDefendSelf": true,
+      "willFlee": false
+    },
+    "herd": {
+      "maxSize": "5"
+    },
+    "moving": {
+      "fly": {
+        "canFly": true
+      },
+      "swim": {
+        "swimSpeed": 0.1,
+        "avoidsWater": true,
+        "canSwimInLava": true
+      },
+      "walk": {
+        "walkSpeed": 0.147
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "fireImmune": true
+  },
+  "drops": {
+    "amount": 4,
+    "entries": [
+      {
+        "item": "minecraft:blaze_powder",
+        "quantityRange": "0-3"
+      },
+      {
+        "item": "cobblemon:charcoal_stick",
+        "percentage": 25
+      }
+    ]
+  },
+  "moves": [
+  "1:bellydrum",
+  "1:block",
+  "1:howl",
+  "1:ember",
+  "1:smokescreen",
+  "4:ember",
+  "7:smokescreen",
+  "10:seismictoss",
+  "13:breakingswipe",
+  "16:firefang",
+  "17:quickattack",
+  "20:dragonbreath",
+  "22:flameburst",
+  "25:metalclaw",
+  "28:scaryface",
+  "31:blazekick",
+  "34:bodyslam",
+  "36:airslash",
+  "37:crunch",
+  "40:ragingfury",
+  "43:inferno",
+  "46:firelash",
+  "50:scorchingsands",
+  "54:heatcrash",
+  "58:dragonrush",
+  "62:flareblitz",
+  "66:dragondance",
+
+  "egg:ancientpower",
+  "egg:bite",
+  "egg:counter",
+  "egg:dragonrage",
+  "egg:dragontail",
+  "egg:wingattack",
+
+  "tm:honeclaws",
+  "tm:dragonclaw",
+  "tm:roar",
+  "tm:toxic",
+  "tm:hiddenpower",
+  "tm:sunnyday",
+  "tm:hyperbeam",
+  "tm:protect",
+  "tm:frustration",
+  "tm:solarbeam",
+  "tm:earthquake",
+  "tm:dig",
+  "tm:brickbreak",
+  "tm:flamethrower",
+  "tm:fireblast",
+  "tm:rocktomb",
+  "tm:aerialace",
+  "tm:facade",
+  "tm:flamecharge",
+  "tm:rest",
+  "tm:poweruppunch",
+  "tm:lowsweep",
+  "tm:mysticalfire",
+  "tm:echoedvoice",
+  "tm:overheat",
+  "tm:weatherball",
+  "tm:hurricane",
+  "tm:incinerate",
+  "tm:willowisp",
+  "tm:acrobatics",
+  "tm:brutalswing",
+  "tm:shadowclaw",
+  "tm:gigaimpact",
+  "tm:swordsdance",
+  "tm:workup",
+  "tm:substitute",
+  "tm:rockslide",
+  "tm:rocksmash",
+  "tm:fly",
+  "tm:cut",
+  "tm:strength",
+  "tm:dualwingbeat",
+  "tm:falseswipe",
+  "tm:slash",
+
+  "tutor:blastburn",
+  "tutor:dragonpulse",
+  "tutor:firepledge",
+  "tutor:firepunch",
+  "tutor:heatwave",
+  "tutor:irontail",
+  "tutor:outrage",
+  "tutor:roost",
+  "tutor:sleeptalk",
+  "tutor:snore",
+  "tutor:tailwind",
+  "tutor:thunderpunch"
+],
+  "preEvolution": "charmeleon",
+  "evolutions": [],
+  "forms": [
+    {
+      "name": "Mega-X",
+      "primaryType": "fire",
+      "secondaryType": "dragon",
+      "maleRatio": 0.875,
+      "height": 17,
+      "weight": 1105,
+      "pokedex": [
+        "cobblemon.species.charizard-megax.desc"
+      ],
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "aspects": [
+        "mega_x"
+      ],
+      "abilities": [
+        "toughclaws",
+        "h:toughclaws"
+      ],
+      "baseStats": {
+        "hp": 78,
+        "attack": 130,
+        "defence": 111,
+        "special_attack": 130,
+        "special_defence": 85,
+        "speed": 100
+      },
+      "baseExperienceYield": 317,
+      "riding": {
+        "behaviour": {
+          "key": "cobblemon:composite",
+          "alternateBehaviour": {
+            "speed": "Math.clamp(q.entity.velocity.horizontal_magnitude + 0.33, 0, 1)",
+            "key": "cobblemon:air/bird",
+            "gravity": "q.gravity * (0.1 + (q.passenger_count - 1) * 0.1)",
+            "jumpVector": [
+              0,
+              "0.3*q.jump_strength/50",
+              0
+            ]
+          },
+          "defaultBehaviour": {
+            "speed": "Math.clamp(q.entity.velocity.horizontal_magnitude + 0.33, 0, 1)",
+            "key": "cobblemon:land/horse",
+            "gravity": "q.gravity * (0.1 + (q.passenger_count - 1) * 0.1)",
+            "jumpVector": [
+              0,
+              "0.3*q.jump_strength/50",
+              "-1 * 0.5*q.jump_strength/50"
+            ]
+          },
+          "transitionStrategy": "cobblemon:strategy/jump"
+        },
+        "seats": [],
+        "stats": {
+          "ACCELERATION": {
+            "ranges": {
+              "AIR": "20-50",
+              "LAND": "90-100"
+            }
+          },
+          "JUMP": {
+            "ranges": {
+              "AIR": "25-50",
+              "LAND": "10-20"
+            }
+          },
+          "SKILL": {
+            "ranges": {
+              "AIR": "50-100",
+              "LAND": "15-30"
+            }
+          },
+          "SPEED": {
+            "ranges": {
+              "AIR": "25-60",
+              "LAND": "10-20"
+            }
+          },
+          "STAMINA": {
+            "ranges": {
+              "AIR": "35-70",
+              "LAND": "15-30"
+            }
+          }
+        }
+      },
+      "behaviour": {
+        "herd": {
+          "maxSize": "6"
+        },
+        "moving": {
+          "swim": {
+            "avoidsWater": true,
+            "canSwimInLava": true
+          },
+          "fly": {
+            "canFly": true
+          }
+        },
+        "combat": {
+          "willDefendSelf": true,
+          "willDefendOwner": true,
+          "willFlee": false
+        },
+        "resting": {
+          "drowsyChance": 0.0333,
+          "rouseChance": 0.0042
+        },
+        "fireImmune": true
+      },
+      "evolutions": [],
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "lightingData": {
+        "lightLevel": 14,
+        "liquidGlowMode": "LAND"
+      }
+    },
+    {
+      "name": "Mega-Y",
+      "primaryType": "fire",
+      "secondaryType": "flying",
+      "maleRatio": 0.875,
+      "height": 17,
+      "weight": 1005,
+      "pokedex": [
+        "cobblemon.species.charizard-megay.desc"
+      ],
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "aspects": [
+        "mega_y"
+      ],
+      "abilities": [
+        "drought",
+        "h:drought"
+      ],
+      "baseStats": {
+        "hp": 75,
+        "attack": 105,
+        "defence": 85,
+        "special_attack": 160,
+        "special_defence": 110,
+        "speed": 100
+      },
+      "baseExperienceYield": 317,
+      "riding": {
+        "behaviour": {
+          "key": "cobblemon:composite",
+          "alternateBehaviour": {
+            "speed": "Math.clamp(q.entity.velocity.horizontal_magnitude + 0.33, 0, 1)",
+            "key": "cobblemon:air/bird",
+            "gravity": "q.gravity * (0.1 + (q.passenger_count - 1) * 0.1)",
+            "jumpVector": [
+              0,
+              "0.3*q.jump_strength/50",
+              0
+            ]
+          },
+          "defaultBehaviour": {
+            "speed": "Math.clamp(q.entity.velocity.horizontal_magnitude + 0.33, 0, 1)",
+            "key": "cobblemon:land/horse",
+            "gravity": "q.gravity * (0.1 + (q.passenger_count - 1) * 0.1)",
+            "jumpVector": [
+              0,
+              "0.3*q.jump_strength/50",
+              "-1 * 0.5*q.jump_strength/50"
+            ]
+          },
+          "transitionStrategy": "cobblemon:strategy/jump"
+        },
+        "seats": [],
+        "stats": {
+          "ACCELERATION": {
+            "ranges": {
+              "AIR": "20-50",
+              "LAND": "90-100"
+            }
+          },
+          "JUMP": {
+            "ranges": {
+              "AIR": "25-50",
+              "LAND": "10-20"
+            }
+          },
+          "SKILL": {
+            "ranges": {
+              "AIR": "50-100",
+              "LAND": "15-30"
+            }
+          },
+          "SPEED": {
+            "ranges": {
+              "AIR": "25-60",
+              "LAND": "10-20"
+            }
+          },
+          "STAMINA": {
+            "ranges": {
+              "AIR": "35-70",
+              "LAND": "15-30"
+            }
+          }
+        }
+      },
+      "behaviour": {
+        "herd": {
+          "maxSize": "6"
+        },
+        "moving": {
+          "swim": {
+            "avoidsWater": true,
+            "canSwimInLava": true
+          },
+          "fly": {
+            "canFly": true
+          }
+        },
+        "combat": {
+          "willDefendSelf": true,
+          "willDefendOwner": true,
+          "willFlee": false
+        },
+        "resting": {
+          "drowsyChance": 0.0333,
+          "rouseChance": 0.0042
+        },
+        "fireImmune": true
+      },
+      "evolutions": [],
+      "battleOnly": true,
+      "dynamaxBlocked": true,
+      "lightingData": {
+        "lightLevel": 14,
+        "liquidGlowMode": "LAND"
+      }
+    },
+    {
+      "name": "Gmax",
+      "primaryType": "fire",
+      "secondaryType": "flying",
+      "maleRatio": 0.875,
+      "height": 280,
+      "weight": 0,
+      "pokedex": [
+        "cobblemon.species.charizard-gmax.desc"
+      ],
+      "labels": [
+        "gen8",
+        "gmax"
+      ],
+      "aspects": [
+        "gmax"
+      ],
+      "evolutions": [],
+      "battleOnly": true,
+      "dynamaxBlocked": true
+    }
+  ],
+  "lightingData": {
+    "lightLevel": 14,
+    "liquidGlowMode": "LAND"
+  }
+}

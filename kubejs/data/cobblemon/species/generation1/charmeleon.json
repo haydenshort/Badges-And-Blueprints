@@ -1,0 +1,190 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 5,
+  "name": "Charmeleon",
+  "primaryType": "fire",
+  "maleRatio": 0.875,
+  "height": 11,
+  "weight": 190,
+  "pokedex": [
+    "cobblemon.species.charmeleon.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "defiant",
+    "blaze",
+    "h:solarpower"
+  ],
+  "eggGroups": [
+    "monster",
+    "dragon"
+  ],
+  "baseStats": {
+    "hp": 58,
+    "attack": 64,
+    "defence": 58,
+    "special_attack": 80,
+    "special_defence": 65,
+    "speed": 80
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 1,
+    "special_defence": 0,
+    "speed": 1
+  },
+  "baseExperienceYield": 142,
+  "experienceGroup": "medium_slow",
+  "catchRate": 45,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 0.7,
+  "hitbox": {
+    "width": 0.9,
+    "height": 1.6,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.175
+      },
+      "swim": {
+        "avoidsWater": true,
+        "canSwimInLava": true
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "3"
+    },
+    "combat": {
+      "willDefendSelf": true,
+      "willDefendOwner": true,
+      "willFlee": false
+    },
+    "fireImmune": true
+  },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "minecraft:blaze_powder",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "cobblemon:charcoal_stick",
+        "percentage": 10
+      }
+    ]
+  },
+  "moves": [
+  "1:block",
+  "1:growl",
+  "1:howl",
+  "1:scratch",
+  "5:ember",
+  "7:twister",
+  "10:seismictoss",
+  "13:breakingswipe",
+  "16:firefang",
+  "17:quickattack",
+  "20:dragonbreath",
+  "22:flameburst",
+  "25:metalclaw",
+  "28:scaryface",
+  "31:blazekick",
+  "34:bodyslam",
+  "37:crunch",
+  "40:ragingfury",
+  "43:inferno",
+  "46:firelash",
+  "49:heatcrash",
+  "52:dragonrush",
+  "55:flareblitz",
+
+  "egg:ancientpower",
+  "egg:bellydrum",
+  "egg:bite",
+  "egg:counter",
+  "egg:dragonrage",
+  "egg:dragontail",
+  "egg:irontail",
+  "egg:wingattack",
+
+  "tm:honeclaws",
+  "tm:dragonclaw",
+  "tm:toxic",
+  "tm:hiddenpower",
+  "tm:sunnyday",
+  "tm:protect",
+  "tm:frustration",
+  "tm:solarbeam",
+  "tm:dig",
+  "tm:brickbreak",
+  "tm:flamethrower",
+  "tm:fireblast",
+  "tm:rocktomb",
+  "tm:aerialace",
+  "tm:facade",
+  "tm:flamecharge",
+  "tm:rest",
+  "tm:poweruppunch",
+  "tm:echoedvoice",
+  "tm:overheat",
+  "tm:weatherball",
+  "tm:willowisp",
+  "tm:falseswipe",
+  "tm:acrobatics",
+  "tm:shadowclaw",
+  "tm:swordsdance",
+  "tm:workup",
+  "tm:substitute",
+  "tm:rockslide",
+  "tm:rocksmash",
+  "tm:cut",
+  "tm:strength",
+  "tm:incinerate",
+  "tm:slash",
+  "tm:firespin",
+  
+  "tutor:firepledge",
+  "tutor:firepunch",
+  "tutor:heatwave",
+  "tutor:irontail",
+  "tutor:outrage",
+  "tutor:sleeptalk",
+  "tutor:snore",
+  "tutor:thunderpunch"
+],
+  "preEvolution": "charmander",
+  "evolutions": [
+    {
+      "id": "charmeleon_charizard",
+      "variant": "level_up",
+      "result": "charizard",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 36
+        }
+      ]
+    }
+  ],
+  "lightingData": {
+    "lightLevel": 12,
+    "liquidGlowMode": "LAND"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "max": 4,
+        "min": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/battle"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/evolution"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/training"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/medicine"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/battle"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/evolution"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/epic/training"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/battle"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/rare/pokeballs"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/evolution"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/training"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/pokeballs"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/legendary/medicine"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rctmod:generic/team_rocket/tms"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "rctmod:trainers/groups/kanto_league"
+}

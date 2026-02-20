@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "createages:zinc_mechanism"
+  },
+  "result": {
+    "id": "functionalstorage:copper_upgrade",
+    "count": 1
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 36,
+  "name": "Clefable",
+  "primaryType": "fairy",
+  "maleRatio": 0.25,
+  "height": 13,
+  "weight": 400,
+  "pokedex": [
+    "cobblemon.species.clefable.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "unaware",
+    "magicguard",
+    "h:unaware"
+  ],
+  "eggGroups": [
+    "fairy"
+  ],
+  "baseStats": {
+    "hp": 95,
+    "attack": 70,
+    "defence": 73,
+    "special_attack": 95,
+    "special_defence": 90,
+    "speed": 60
+  },
+  "evYield": {
+    "hp": 3,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 242,
+  "experienceGroup": "fast",
+  "catchRate": 25,
+  "eggCycles": 10,
+  "baseFriendship": 140,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1,
+    "height": 1.6,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      },
+      "fly": {
+        "canFly": true
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "day"
+      ],
+      "drowsyChance": 0.0033,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "4"
+    },
+    "combat": {
+      "willDefendOwner": true
+    }
+  },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "cobblemon:moon_stone",
+        "percentage": 10
+      },
+      {
+        "item": "cobblemon:babiri_berry",
+        "percentage": 10
+      },
+      {
+        "item": "cobblemon:fairy_feather",
+        "percentage": 10
+      }
+    ]
+  },
+  "moves": [
+    "1:aromatherapy",
+    "1:metronome",
+    "1:sing",
+    "1:softboiled",
+    "30:wish",
+    "50:moonblast",
+    "65:lunardance",
+
+    "egg:amnesia",
+    "egg:bellydrum",
+    "egg:faketears",
+    "egg:healpulse",
+    "egg:mimic",
+    "egg:mistyterrain",
+    "egg:present",
+    "egg:softboiled",
+    "egg:tickle",
+
+    "tm:psyshock",
+    "tm:calmmind",
+    "tm:toxic",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:icebeam",
+    "tm:blizzard",
+    "tm:hyperbeam",
+    "tm:lightscreen",
+    "tm:protect",
+    "tm:raindance",
+    "tm:triattack",
+    "tm:frustration",
+    "tm:solarbeam",
+    "tm:thunderbolt",
+    "tm:thunder",
+    "tm:return",
+    "tm:dig",
+    "tm:psychic",
+    "tm:shadowball",
+    "tm:brickbreak",
+    "tm:dazzlinggleam",
+    "tm:reflect",
+    "tm:flamethrower",
+    "tm:fireblast",
+    "tm:facade",
+    "tm:rest",
+    "tm:poweruppunch",
+    "tm:mysticalfire",
+    "tm:echoedvoice",
+    "tm:focusblast",
+    "tm:chargebeam",
+    "tm:incinerate",
+    "tm:powergem",
+    "tm:retailiate",
+    "tm:gigaimpact",
+    "tm:flash",
+    "tm:thunderwave",
+    "tm:psychup",
+    "tm:workup",
+    "tm:playrough",
+    "tm:grassknot",
+    "tm:substitute",
+    "tm:rocksmash",
+    "tm:strength",
+    "tm:aurasphere",
+    "tm:cosmicpower",
+    "tm:drainingkiss",
+    "tm:dualwingbeat",
+    "tm:mistyexplosion",
+    "tm:teleport",
+
+    "tutor:afteryou",
+    "tutor:bounce",
+    "tutor:covet",
+    "tutor:drainpunch",
+    "tutor:endeavor",
+    "tutor:firepunch",
+    "tutor:gravity",
+    "tutor:healbell",
+    "tutor:helpinghand",
+    "tutor:hypervoice",
+    "tutor:icepunch",
+    "tutor:icywind",
+    "tutor:irontail",
+    "tutor:knockoff",
+    "tutor:lastresort",
+    "tutor:magiccoat",
+    "tutor:recycle",
+    "tutor:roleplay",
+    "tutor:signalbeam",
+    "tutor:sleeptalk",
+    "tutor:snatch",
+    "tutor:snore",
+    "tutor:stealthrock",
+    "tutor:thunderpunch",
+    "tutor:trick",
+    "tutor:wonderroom",
+    "tutor:alluringvoice",
+    "tutor:bodyslam",
+    "tutor:focuspunch",
+    "tutor:meteorbeam",
+    "tutor:storedpower",
+    "tutor:uproar",
+    "tutor:zenheadbutt"
+  ],
+  "preEvolution": "clefairy",
+  "evolutions": []
+}

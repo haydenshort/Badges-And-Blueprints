@@ -1,0 +1,208 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 41,
+  "name": "Zubat",
+  "primaryType": "poison",
+  "secondaryType": "flying",
+  "maleRatio": 0.5,
+  "height": 8,
+  "weight": 75,
+  "pokedex": [
+    "cobblemon.species.zubat.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "infiltrator",
+    "sniper",
+    "h:corrosion"
+  ],
+  "eggGroups": [
+    "flying"
+  ],
+  "baseStats": {
+    "hp": 40,
+    "attack": 45,
+    "defence": 35,
+    "special_attack": 30,
+    "special_defence": 40,
+    "speed": 55
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 1
+  },
+  "baseExperienceYield": 49,
+  "experienceGroup": "medium_fast",
+  "catchRate": 255,
+  "eggCycles": 15,
+  "baseFriendship": 50,
+  "shoulderMountable": true,
+  "baseScale": 0.8,
+  "hitbox": {
+    "width": 0.6,
+    "height": 1.1,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "fly": {
+        "canFly": true
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "walk": {
+        "canWalk": false
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "willSleepOnBed": true,
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0014,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "9",
+      "toleratedLeaders": [
+        {
+          "pokemon": "woobat",
+          "tier": 1
+        },
+        {
+          "pokemon": "noibat",
+          "tier": 1
+        },
+        {
+          "pokemon": "zubat",
+          "tier": 2
+        },
+        {
+          "pokemon": "swoobat",
+          "tier": 3
+        },
+        {
+          "pokemon": "golbat",
+          "tier": 4
+        },
+        {
+          "pokemon": "crobat",
+          "tier": 5
+        }
+      ]
+    },
+    "combat": {
+      "willDefendOwner": true
+    }
+  },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "minecraft:phantom_membrane",
+        "percentage": 2.5
+      },
+      {
+        "item": "cobblemon:razor_fang",
+        "percentage": 2.5
+      },
+      {
+        "item": "cobblemon:persim_berry",
+        "percentage": 2.5
+      }
+    ]
+  },
+  "moves": [
+    "1:absorb",
+    "1:gust",
+    "1:quickattack",
+    "1:screech",
+    "4:poisonsting",
+    "7:bite",
+    "10:wingattack",
+    "13:confuseray",
+    "16:poisonfang",
+    "19:swift",
+    "22:meanlook",
+    "25:feintattack",
+    "28:aircutter",
+    "31:haze",
+    "34:whirlwind",
+    "37:zenheadbutt",
+    "40:superfang",
+    "43:nastyplot",
+    "46:leechlife",
+    "50:hypnosis",
+    "53:airslash",
+    "56:wideguard",
+    "59:bravebird",
+
+    "egg:curse",
+    "egg:defog",
+    "egg:gigadrain",
+    "egg:pursuit",
+    "egg:steelwing",
+    "egg:venomdrench",
+
+    "tm:toxic",
+    "tm:venoshock",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:taunt",
+    "tm:protect",
+    "tm:raindance",
+    "tm:gigadrain",
+    "tm:frustration",
+    "tm:return",
+    "tm:shadowball",
+    "tm:sludgebomb",
+    "tm:aerialace",
+    "tm:facade",
+    "tm:rest",
+    "tm:acrobatics",
+    "tm:pluck",
+    "tm:uturn",
+    "tm:substitute",
+    "tm:fly",
+    "tm:defog",
+    "tm:dualwingbeat",
+    "tm:steelwing",
+    "tm:thief",
+
+    "tutor:gigadrain",
+    "tutor:heatwave",
+    "tutor:roost",
+    "tutor:sleeptalk",
+    "tutor:snatch",
+    "tutor:snore",
+    "tutor:superfang",
+    "tutor:tailwind",
+    "tutor:uproar",
+    "tutor:zenheadbutt"
+  ],
+  "evolutions": [
+    {
+      "id": "zubat_golbat",
+      "variant": "level_up",
+      "result": "golbat",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 22
+        }
+      ]
+    }
+  ]
+}

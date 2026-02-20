@@ -1,0 +1,195 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 32,
+  "name": "Nidoran-M",
+  "primaryType": "poison",
+  "maleRatio": 1,
+  "height": 5,
+  "weight": 90,
+  "pokedex": [
+    "cobblemon.species.nidoranm.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "hustle",
+    "poisonpoint",
+    "h:rivalry"
+  ],
+  "eggGroups": [
+    "monster",
+    "field"
+  ],
+  "baseStats": {
+    "hp": 46,
+    "attack": 57,
+    "defence": 40,
+    "special_attack": 40,
+    "special_defence": 40,
+    "speed": 50
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 1,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 55,
+  "experienceGroup": "medium_slow",
+  "catchRate": 235,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 0.6,
+  "hitbox": {
+    "width": 0.7,
+    "height": 0.8,
+    "fixed": false
+  },
+  "behaviour": {
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "willSleepOnBed": true,
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "4",
+      "toleratedLeaders": [
+        {
+          "pokemon": "nidoranf",
+          "tier": 1
+        },
+        {
+          "pokemon": "nidoranm",
+          "tier": 2
+        },
+        {
+          "pokemon": "nidorino",
+          "tier": 3
+        },
+        {
+          "pokemon": "nidorina",
+          "tier": 4
+        },
+        {
+          "pokemon": "nidoking",
+          "tier": 5
+        },
+        {
+          "pokemon": "nidoqueen",
+          "tier": 6
+        }
+      ]
+    },
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "combat": {
+      "willDefendOwner": true
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "cobblemon:poison_barb",
+        "percentage": 2.5
+      },
+      {
+        "item": "cobblemon:pecha_berry",
+        "percentage": 2.5
+      }
+    ]
+  },
+  "moves": [
+    "1:growl",
+    "1:poisonsting",
+    "1:scratch",
+    "1:tailwhip",
+    "4:peck",
+    "7:doublekick",
+    "10:furyattack",
+    "13:poisonfang",
+    "16:hornattack",
+    "19:helpinghand",
+    "22:focusenergy",
+    "25:poisonjab",
+    "28:beatup",
+    "31:bodyslam",
+    "34:crunch",
+    "37:smartstrike",
+    "40:poisontail",
+    "44:scorchingsands",
+    "48:takedown",
+    "52:suckerpunch",
+    "56:headsmash",
+
+    "egg:amnesia",
+    "egg:chipaway",
+    "egg:confusion",
+    "egg:counter",
+    "egg:disable",
+    "egg:endure",
+    "egg:horndrill",
+    "egg:supersonic",
+    "egg:thrash",
+    "egg:venomdrench",
+
+    "tm:honeclaws",
+    "tm:toxic",
+    "tm:venoshock",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:icebeam",
+    "tm:blizzard",
+    "tm:protect",
+    "tm:raindance",
+    "tm:frustration",
+    "tm:thunderbolt",
+    "tm:thunder",
+    "tm:return",
+    "tm:dig",
+    "tm:sludgebomb",
+    "tm:facade",
+    "tm:rest",
+    "tm:echoedvoice",
+    "tm:shadowclaw",
+    "tm:poisonjab",
+    "tm:substitute",
+    "tm:rocksmash",
+    "tm:cut",
+    "tm:strength",
+    "tm:reflect",
+    "tm:thief",
+
+    "tutor:drillrun",
+    "tutor:helpinghand",
+    "tutor:irontail",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:toxicspikes",
+    "tutor:superfang"
+  ],
+  "evolutions": [
+    {
+      "id": "nidoranm_nidorino",
+      "variant": "level_up",
+      "result": "nidorino",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 16
+        }
+      ]
+    }
+  ]
+}

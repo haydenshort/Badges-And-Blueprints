@@ -1,0 +1,232 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 17,
+  "name": "Pidgeotto",
+  "primaryType": "normal",
+  "secondaryType": "flying",
+  "maleRatio": 0.5,
+  "height": 11,
+  "weight": 300,
+  "pokedex": [
+    "cobblemon.species.pidgeotto.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "bigpecks",
+    "tangledfeet",
+    "h:keeneye"
+  ],
+  "eggGroups": [
+    "flying"
+  ],
+  "baseStats": {
+    "hp": 63,
+    "attack": 50,
+    "defence": 50,
+    "special_attack": 65,
+    "special_defence": 50,
+    "speed": 71
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 2
+  },
+  "baseExperienceYield": 122,
+  "experienceGroup": "medium_slow",
+  "catchRate": 120,
+  "eggCycles": 15,
+  "baseFriendship": 50,
+  "baseScale": 1.1,
+  "hitbox": {
+    "width": 0.6,
+    "height": 1,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "fly": {
+        "canFly": true
+      },
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "combat": {
+      "fightsMelee": true,
+      "willDefendOwner": true
+    },
+    "herd": {
+      "maxSize": "9",
+      "toleratedLeaders": [
+        {
+          "pokemon": "tranquill",
+          "tier": 1
+        },
+        {
+          "pokemon": "staravia",
+          "tier": 1
+        },
+        {
+          "pokemon": "pidgeotto",
+          "tier": 2
+        },
+        {
+          "pokemon": "unfezant",
+          "tier": 3
+        },
+        {
+          "pokemon": "pidgeot mega=false",
+          "tier": 4
+        },
+        {
+          "pokemon": "pidgeot mega",
+          "tier": 5
+        }
+      ]
+    }
+  },
+  "ai": [
+    {
+      "type": "cobblemon:add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "7": [
+          {
+            "type": "cobblemon:target_entity",
+            "entityCondition": "q.entity.is_pokemon && q.entity.species.identifier == 'cobblemon:magikarp' && q.entity.world.is_air(q.entity.x, q.entity.y + 1, q.entity.z)"
+          }
+        ]
+      }
+    }
+  ],
+  "drops": {
+    "amount": 5,
+    "entries": [
+      {
+        "item": "minecraft:feather",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "minecraft:chicken"
+      },
+      {
+        "item": "cobblemon:sharp_beak",
+        "percentage": 2.5
+      },
+      {
+        "item": "cobblemon:chilan_berry",
+        "percentage": 5
+      }
+    ]
+  },
+  "moves": [
+    "1:foresight",
+    "1:mudslap",
+    "1:sandattack",
+    "1:tackle",
+    "3:gust",
+    "5:echoedvoice",
+    "7:twister",
+    "9:quickattack",
+    "11:aircutter",
+    "13:featherdance",
+    "15:swift",
+    "17:mirrormove",
+    "18:pursuit",
+    "20:uproar",
+    "22:ominouswind",
+    "25:steelwing",
+    "28:whirlwind",
+    "31:hypervoice",
+    "35:airslash",
+    "39:agility",
+    "43:tailwind",
+    "47:doubleedge",
+    "51:bravebird",
+    "55:skyattack",
+
+    "egg:feintattack",
+
+    "tm:toxic",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:protect",
+    "tm:raindance",
+    "tm:frustration",
+    "tm:return",
+    "tm:aerialace",
+    "tm:facade",
+    "tm:rest",
+    "tm:chargebeam",
+    "tm:hurricane",
+    "tm:workup",
+    "tm:pluck",
+    "tm:uturn",
+    "tm:substitute",
+    "tm:fly",
+    "tm:dualwingbeat",
+    "tm:takedown",
+    "tm:defog",
+    "tm:reflect",
+    "tm:thief",
+
+    "tutor:heatwave",
+    "tutor:roost",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:tailwind",
+    "tutor:uproar"
+  ],
+  "preEvolution": "pidgey",
+  "evolutions": [
+    {
+      "id": "pidgeotto_pidgeot",
+      "variant": "level_up",
+      "result": "pidgeot",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 36
+        }
+      ]
+    }
+  ],
+  "riding": {
+    "stats": {
+      "SPEED": {
+        "ranges": "30-60"
+      },
+      "ACCELERATION": {
+        "ranges": "30-60"
+      },
+      "SKILL": {
+        "ranges": "30-60"
+      },
+      "JUMP": {
+        "ranges": "25-50"
+      },
+      "STAMINA": {
+        "ranges": "30-60"
+      }
+    },
+    "seats": [],
+    "behaviour": {
+      "key": "cobblemon:air/glider"
+    }
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 19,
+  "name": "Rattata",
+  "primaryType": "normal",
+  "maleRatio": 0.5,
+  "height": 3,
+  "weight": 35,
+  "pokedex": [
+    "cobblemon.species.rattata.desc"
+  ],
+  "labels": [
+    "gen1",
+    "kantonian_form"
+  ],
+  "aspects": [],
+  "abilities": [
+    "hustle",
+    "guts",
+    "h:runaway"
+  ],
+  "eggGroups": [
+    "field"
+  ],
+  "baseStats": {
+    "hp": 30,
+    "attack": 56,
+    "defence": 35,
+    "special_attack": 25,
+    "special_defence": 35,
+    "speed": 72
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 1
+  },
+  "baseExperienceYield": 51,
+  "experienceGroup": "medium_fast",
+  "catchRate": 255,
+  "eggCycles": 15,
+  "baseFriendship": 50,
+  "features": [
+    "alolan"
+  ],
+  "baseScale": 0.8,
+  "hitbox": {
+    "width": 0.6,
+    "height": 0.5,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.41
+      },
+      "swim": {
+        "avoidsWater": true
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "willSleepOnBed": true,
+      "light": "0-4",
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "6",
+      "toleratedLeaders": [
+        {
+          "pokemon": "raticate alolan",
+          "tier": 1
+        }
+      ]
+    },
+    "combat": {
+      "willDefendOwner": true
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "minecraft:rotten_flesh",
+        "quantityRange": "0-1"
+      },
+      {
+        "item": "cobblemon:chilan_berry",
+        "percentage": 2.5
+      }
+    ]
+  },
+  "moves": [
+    "1:bite",
+    "1:mefirst",
+    "1:tackle",
+    "1:tailwhip",
+    "4:focusenergy",
+    "7:screech",
+    "10:quickattack",
+    "13:pursuit",
+    "16:assurance",
+    "19:furyswipes",
+    "22:endeavor",
+    "25:firefang",
+    "25:icefang",
+    "25:thunderfang",
+    "31:crunch",
+    "34:flamewheel",
+    "38:zenheadbutt",
+    "42:reversal",
+    "46:suckerpunch",
+    "50:doubleedge",
+    "54:lastresort",
+    "58:finalgambit",
+
+    "egg:counter",
+    "egg:revenge",
+    "egg:reversal",
+    "egg:stockpile",
+    "egg:swallow",
+
+    "tm:honeclaws",
+    "tm:toxic",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:taunt",
+    "tm:icebeam",
+    "tm:blizzard",
+    "tm:protect",
+    "tm:raindance",
+    "tm:frustration",
+    "tm:thunderbolt",
+    "tm:thunder",
+    "tm:return",
+    "tm:dig",
+    "tm:shadowball",
+    "tm:facade",
+    "tm:rest",
+    "tm:chargebeam",
+    "tm:quash",
+    "tm:retaliate",
+    "tm:thunderwave",
+    "tm:workup",
+    "tm:grassknot",
+    "tm:pluck",
+    "tm:uturn",
+    "tm:substitute",
+    "tm:wildcharge",
+    "tm:rocksmash",
+    "tm:cut",
+    "tm:hyperfang",
+    "tm:sludgebomb",
+    "tm:thief",
+    "tm:bodyslam",
+
+    "tutor:covet",
+    "tutor:endeavor",
+    "tutor:icywind",
+    "tutor:irontail",
+    "tutor:lastresort",
+    "tutor:sleeptalk",
+    "tutor:snore",
+    "tutor:superfang",
+    "tutor:uproar",
+    "tutor:zenheadbutt"
+  ],
+  "evolutions": [
+    {
+      "id": "rattata_raticate",
+      "variant": "level_up",
+      "result": "raticate",
+      "consumeHeldItem": false,
+      "learnableMoves": [
+        "scaryface"
+      ],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 20
+        }
+      ]
+    }
+  ],
+  "forms": [
+    {
+      "name": "Alola",
+      "primaryType": "dark",
+      "maleRatio": 0.5,
+      "height": 3,
+      "weight": 38,
+      "pokedex": [
+        "cobblemon.species.rattata-alola.desc"
+      ],
+      "labels": [
+        "gen7",
+        "alolan_form"
+      ],
+      "aspects": [
+        "alolan"
+      ],
+      "abilities": [
+        "thickfat",
+        "hustle",
+        "h:gluttony"
+      ],
+      "drops": {
+        "amount": 2,
+        "entries": [
+          {
+            "item": "minecraft:rotten_flesh",
+            "quantityRange": "0-1"
+          },
+          {
+            "item": "cobblemon:pecha_berry",
+            "percentage": 2.5
+          }
+        ]
+      },
+      "moves": [
+        "1:bite",
+        "1:mefirst",
+        "1:tackle",
+        "1:tailwhip",
+        "4:focusenergy",
+        "7:snatch",
+        "10:quickattack",
+        "13:pursuit",
+        "16:assurance",
+        "19:furyswipes",
+        "22:endeavor",
+        "25:firefang",
+        "25:icefang",
+        "25:thunderfang",
+        "31:crunch",
+        "34:flamewheel",
+        "38:zenheadbutt",
+        "42:reversal",
+        "46:suckerpunch",
+        "50:doubleedge",
+        "54:lastresort",
+        "58:finalgambit",
+
+        "egg:counter",
+        "egg:revenge",
+        "egg:reversal",
+        "egg:stockpile",
+        "egg:swallow",
+
+        "tm:honeclaws",
+        "tm:toxic",
+        "tm:hiddenpower",
+        "tm:sunnyday",
+        "tm:taunt",
+        "tm:icebeam",
+        "tm:blizzard",
+        "tm:protect",
+        "tm:raindance",
+        "tm:frustration",
+        "tm:thunderbolt",
+        "tm:thunder",
+        "tm:return",
+        "tm:dig",
+        "tm:shadowball",
+        "tm:facade",
+        "tm:rest",
+        "tm:chargebeam",
+        "tm:quash",
+        "tm:retaliate",
+        "tm:thunderwave",
+        "tm:workup",
+        "tm:grassknot",
+        "tm:pluck",
+        "tm:uturn",
+        "tm:substitute",
+        "tm:wildcharge",
+        "tm:rocksmash",
+        "tm:cut",
+        "tm:hyperfang",
+        "tm:sludgebomb",
+        "tm:thief",
+        "tm:bodyslam",
+        "tm:darkpulse",
+        "tm:snarl",
+
+        "tutor:covet",
+        "tutor:endeavor",
+        "tutor:icywind",
+        "tutor:irontail",
+        "tutor:lastresort",
+        "tutor:sleeptalk",
+        "tutor:snore",
+        "tutor:superfang",
+        "tutor:uproar",
+        "tutor:zenheadbutt"
+      ],
+      "evolutions": [
+        {
+          "id": "rattata_raticatealola",
+          "variant": "level_up",
+          "result": "raticate alolan",
+          "consumeHeldItem": false,
+          "learnableMoves": [
+            "scaryface"
+          ],
+          "requirements": [
+            {
+              "variant": "level",
+              "minLevel": 20
+            },
+            {
+              "variant": "time_range",
+              "range": "night"
+            }
+          ]
+        }
+      ],
+      "battleOnly": false,
+      "behaviour": {
+        "herd": {
+          "maxSize": "6",
+          "toleratedLeaders": [
+            {
+              "pokemon": "raticate alolan",
+              "tier": 1
+            }
+          ]
+        },
+        "resting": {
+          "willSleepOnBed": true,
+          "times": [
+            "day"
+          ],
+          "drowsyChance": 0.0033,
+          "rouseChance": 0.0042
+        },
+        "moving": {
+          "swim": {
+            "avoidsWater": true
+          }
+        },
+        "combat": {
+          "willDefendOwner": true
+        }
+      }
+    }
+  ]
+}

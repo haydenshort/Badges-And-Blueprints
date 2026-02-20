@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "createages:zinc_machine"
+  },
+  "result": {
+    "id": "functionalstorage:controller_extension",
+    "count": 1
+  }
+}

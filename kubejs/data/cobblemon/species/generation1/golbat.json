@@ -1,0 +1,199 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 42,
+  "name": "Golbat",
+  "primaryType": "poison",
+  "secondaryType": "flying",
+  "maleRatio": 0.5,
+  "height": 16,
+  "weight": 550,
+  "pokedex": [
+    "cobblemon.species.golbat.desc"
+  ],
+  "labels": [
+    "gen1"
+  ],
+  "aspects": [],
+  "abilities": [
+    "infiltrator",
+    "sniper",
+    "h:corrosion"
+  ],
+  "eggGroups": [
+    "flying"
+  ],
+  "baseStats": {
+    "hp": 75,
+    "attack": 80,
+    "defence": 70,
+    "special_attack": 65,
+    "special_defence": 75,
+    "speed": 90
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 2
+  },
+  "baseExperienceYield": 159,
+  "experienceGroup": "medium_fast",
+  "catchRate": 90,
+  "eggCycles": 15,
+  "baseFriendship": 50,
+  "baseScale": 1.2,
+  "hitbox": {
+    "width": 0.8,
+    "height": 1.2,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "swim": {
+        "avoidsWater": true
+      },
+      "fly": {
+        "canFly": true
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0014,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": "9",
+      "toleratedLeaders": [
+        {
+          "pokemon": "swoobat",
+          "tier": 1
+        },
+        {
+          "pokemon": "golbat",
+          "tier": 2
+        },
+        {
+          "pokemon": "crobat",
+          "tier": 3
+        }
+      ]
+    },
+    "combat": {
+      "willDefendSelf": true,
+      "willDefendOwner": true,
+      "willFlee": false
+    }
+  },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "minecraft:phantom_membrane",
+        "percentage": 5
+      },
+      {
+        "item": "cobblemon:razor_fang",
+        "percentage": 5
+      },
+      {
+        "item": "cobblemon:persim_berry",
+        "percentage": 5
+      }
+    ]
+  },
+  "moves": [
+    "1:absorb",
+    "1:gust",
+    "1:quickattack",
+    "1:screech",
+    "4:poisonsting",
+    "7:bite",
+    "10:wingattack",
+    "13:confuseray",
+    "16:poisonfang",
+    "19:swift",
+    "22:meanlook",
+    "26:feintattack",
+    "30:aircutter",
+    "33:haze",
+    "36:whirlwind",
+    "40:zenheadbutt",
+    "44:superfang",
+    "48:nastyplot",
+    "52:leechlife",
+    "55:hypnosis",
+    "59:airslash",
+    "63:wideguard",
+    "67:bravebird",
+
+    "egg:curse",
+    "egg:defog",
+    "egg:gigadrain",
+    "egg:pursuit",
+    "egg:steelwing",
+    "egg:venomdrench",
+
+    "tm:toxic",
+    "tm:venoshock",
+    "tm:hiddenpower",
+    "tm:sunnyday",
+    "tm:taunt",
+    "tm:hyperbeam",
+    "tm:protect",
+    "tm:raindance",
+    "tm:gigadrain",
+    "tm:frustration",
+    "tm:return",
+    "tm:shadowball",
+    "tm:sludgebomb",
+    "tm:aerialace",
+    "tm:facade",
+    "tm:rest",
+    "tm:hurricane",
+    "tm:acrobatics",
+    "tm:gigaimpact",
+    "tm:pluck",
+    "tm:uturn",
+    "tm:substitute",
+    "tm:fly",
+    "tm:defog",
+    "tm:dualwingbeat",
+    "tm:steelwing",
+    "tm:thief",
+    
+    "tutor:gigadrain",
+    "tutor:heatwave",
+    "tutor:roost",
+    "tutor:sleeptalk",
+    "tutor:snatch",
+    "tutor:snore",
+    "tutor:superfang",
+    "tutor:tailwind",
+    "tutor:uproar",
+    "tutor:zenheadbutt"
+  ],
+  "preEvolution": "zubat",
+  "evolutions": [
+    {
+      "id": "golbat_crobat",
+      "variant": "level_up",
+      "result": "crobat",
+      "consumeHeldItem": false,
+      "learnableMoves": [
+        "crosspoison"
+      ],
+      "requirements": [
+        {
+          "variant": "friendship",
+          "amount": 160
+        }
+      ]
+    }
+  ]
+}
