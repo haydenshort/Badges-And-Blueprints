@@ -130,14 +130,11 @@
     "52:fissure",
     "56:finalgambit",
 
-    "egg:ancientpower",
+    "egg:endure",
     "egg:feintattack",
-    "egg:finalgambit",
     "egg:headbutt",
-    "egg:honeclaws",
-    "egg:memento",
-    "egg:mudbomb",
-    "egg:pursuit",
+    "egg:screech",
+    "egg:uproar",
 
     "tm:honeclaws",
     "tm:toxic",
@@ -159,11 +156,18 @@
     "tm:earthquake",
     "tm:shadowclaw",
     "tm:substitute",
+    "tm:cut",
+    "tm:rocksmash",
+    "tm:stompingtantrum",
+    "tm:thief",
 
     "tutor:earthpower",
     "tutor:sleeptalk",
     "tutor:snore",
     "tutor:stealthrock",
+    "tutor:bodyslam",
+    "tutor:rockblast",
+    "tutor:sandstorm",
     "tutor:uproar"
   ],
   "evolutions": [
