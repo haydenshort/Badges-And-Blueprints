@@ -59,7 +59,7 @@ Summary of changes here:
 </details>
 
 <details>
-<summary>Removed (15)</summary>
+<summary>Removed (4)</summary>
 
 - Create: Ages (0.5.0b)
 - Create: Numismatics (1.0.19)
