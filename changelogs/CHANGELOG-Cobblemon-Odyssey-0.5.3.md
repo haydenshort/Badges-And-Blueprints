@@ -60,7 +60,7 @@ Summary of changes here:
 </details>
 
 <details open>
-<summary>Removed (8)</summary>
+<summary>Removed (7)</summary>
 
 - Better End Cities Datapack
 - BetterF3 (11.0.3)
@@ -69,7 +69,6 @@ Summary of changes here:
 - Enhanced Pastures Resource Pack
 - Fitting XP Mana Bar Resource Pack
 - Hardcore Revival (21.1.13)
-- RCT Badges Datapack
 
 </details>
 
