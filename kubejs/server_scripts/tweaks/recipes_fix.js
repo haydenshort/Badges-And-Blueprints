@@ -66,8 +66,27 @@ KubeJSTweaks.beforeRecipes(event => {
         entry.replaceValueAtKey("ingredients", "fluid_tag", "c:chocolates", "c:chocolate")
     })
 
+    event.getEntry(/^create:.*\/compat\/(biomeswevegone)\//).forEach(entry => {
+        entry.addConditionsFromKey("ingredients")
+    })
+
     event.getEntry("berrypouch:berry_pouch_30").forEach(entry => {
-        entry.ignoreWarning()
+        entry.addConditionsFromKey("result")
+    })
+
+    event.getEntry(/^regions_unexplored:.*_snowbelle$/).forEach(entry => {
+        let ings = entry.json().get("ingredients")
+        if (ings != null) {
+            for (let ing of ings) {
+                let tag = ing.get("tag")
+                if (tag != null) {
+                    if (tag.getAsString().endsWith("_dyes")) {
+                        let color = tag.getAsString().replace("c:","").replace("_dyes","")
+                        ing["addProperty(java.lang.String,java.lang.String)"]("tag", "c:dyes/" + color)
+                    }
+                }
+            }
+        }
     })
 
     console.log(`Fixing recipes took ${timer.stop().elapsed("milliseconds")} ms...`)
