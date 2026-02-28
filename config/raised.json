@@ -121,6 +121,17 @@
       },
       "sync": "artifacts:helium_flamingo_charge"
     },
+    "biomeswevegone:textures/misc/palepumpkinblur.png": {
+      "displacement": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": {
+        "x": "NONE",
+        "y": "NONE"
+      },
+      "sync": "biomeswevegone:textures/misc/palepumpkinblur.png"
+    },
     "brewinandchewin:food_offset": {
       "displacement": {
         "x": 0,
