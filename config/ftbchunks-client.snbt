@@ -138,19 +138,19 @@
 		# Default: true
 		entity_heads: true
 		entity_icon: {
-			"minecraft:zombie": true
-			"friendsandfoes:mauler": true
-			"irons_spellbooks:necromancer": true
-			"minecraft:bat": true
-			"minecraft:glow_squid": true
-			"minecraft:slime": true
-			"cobblemon:pokemon": true
-			"minecraft:spider": true
 			"minecraft:skeleton": true
+			"minecraft:bat": true
+			"minecraft:spider": true
+			"tide:crystal_shrimp": true
+			"cobblemon:pokemon": true
 			"minecraft:creeper": true
+			"minecraft:slime": true
+			"minecraft:glow_squid": true
+			"minecraft:zombie": true
+			"irons_spellbooks:necromancer": true
+			"friendsandfoes:mauler": true
 			"tide:iron_tetra": true
 			"minecraft:rabbit": true
-			"tide:crystal_shrimp": true
 		}
 		
 		# Minimap font scaling (values not a multiple of 0.5 may look bad)
