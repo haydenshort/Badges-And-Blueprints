@@ -14,6 +14,7 @@ Summary of changes here:
 - Cleaned Configs.
 - Fixed unregistered recipes.
 - Edited Accessories and Curios Config.
+- Removed ability to pick up tile entities and Cobbleloot Balls with CarryOn.
 
 </details>
 
@@ -22,12 +23,14 @@ Summary of changes here:
 ## Mods
 
 <details open>
-<summary>Added (4)</summary>
+<summary>Added (6)</summary>
   
 - Better Compatability Checker (21.1.8)
 - Catch Indicator (1.4)
 - Cobblemon Party Extras (1.6.11)
 - Cobblemon Spawn Notification (1.7.3-2.3.0)
+- Immersive Paintings (0.7.6)
+- More Overlays Updated (1.24.2)
 
 </details>
 
