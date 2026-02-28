@@ -1,6 +1,6 @@
 # Changelog
 
-# 0.5.2-beta
+# 0.5.3-beta
 
 ## General changes and notes
 
@@ -10,9 +10,10 @@ Summary of changes here:
 <summary>Github Commits</summary>
 <blockquote>
 
-- Removed Waystone Costs and Cooldowns
-- Disabled FML version check
-- Edited Default Configs
+- Renamed Project to "Cobblemon Odyssey".
+- Cleaned Configs.
+- Fixed unregistered recipes.
+- Edited Accessories and Curios Config.
 
 </details>
 
@@ -21,53 +22,70 @@ Summary of changes here:
 ## Mods
 
 <details open>
-<summary>Added (11)</summary>
-
-- Carry On (2.2.4.4)
-- Configured Defaults (21.1.3)
-- Explorify (1.6.4)
-- Formations: Nether (1.0.5)
-- Formations: Overworld (1.0.5)
-- Moog's End Structures (2.0.1)
-- Moog's Nether Structures (2.0.31)
-- Moog's Soaring Structures (2.0.2)
-- Moog's Voyager Stuctures (5.0.5)
-- Oh The Biomes We've Gone (2.5.4)
-- Regions Unexplored (0.5.9)
-- Regions Unexplored: Expansion (1.0.1)
-- Towns and Towers (1.13.7)
-
-</details>
-
-<details>
-<summary>Updated (15)</summary>
+<summary>Added (4)</summary>
   
-- Bosses Rise (2.0.3a) -> (1.1.3)
-- Cobblemon Firework Capsules (2.0.0) -> (2.1.0)
-- Cobblemon Raid Dens (0.7.5) -> (0.7.6)
-- Create: Enchantment Industry (2.2.5b) -> (2.3.0)
-- FTB Chunks x Xaero's Compat (1.1.2) -> (1.1.3)
-- Hardcore Revival (21.1.12) -> (21.1.13)
-- Let's Do Brewery (2.1.7) -> (2.1.8)
-- Let's Do Candlelight (2.1.9) -> (2.1.10)
-- Let's Do Farm And Charm (1.1.19) -> (1.1.20)
-- Let's Do Herbal Brews (1.1.2) -> (1.1.3)
-- Moonlight LIB (2.29.16) -> (2.29.17)
-- Supplementaries (3.5.17) -> (3.5.24)
-- Xaero's Maps x Waystones (2.6.0) -> (2.6.1)
+- Better Compatability Checker (21.1.8)
+- Catch Indicator (1.4)
+- Cobblemon Party Extras (1.6.11)
+- Cobblemon Spawn Notification (1.7.3-2.3.0)
 
 </details>
 
 <details>
-<summary>Removed (4)</summary>
-
-- Create: Ages (0.5.0b)
-- Create: Numismatics (1.0.19)
-- Quality Foods (2.3.1)
-- Selling Bin (1.1.1)
+<summary>Updated (19)</summary>
+  
+- Actually Additions (1.3.24) -> (1.3.25)
+- Advanced Loot Info (1.7.2) -> (1.7.3)
+- Cobblemon Battle Extras (1.8.28) -> (1.8.30)
+- Cobblemon Integrations (1.1.5) -> (1.1.6)
+- Cobblemon PlayerXP (1.0.5) -> (1.0.6)
+- Creative Core (2.13.31) -> (2.13.34)
+- FTB Quests (2101.1.21) -> (2101.1.22)
+- Let's Do Beachparty (2.1.3) -> (2.1.4)
+- Let's Do Candlelight (2.1.10) -> (2.1.11)
+- Let's Do Meadow (1.4.6) -> (1.4.8)
+- Lootr (1.11.36.115) -> (1.11.36.116)
+- MoonlightLIB (2.29.17) -> (2.29.18)
+- Psi (1.21.1-107) -> (1.21.1-108)
+- Pufferfish's Skills (0.17.2) -> (0.17.3)
+- Skin Layers 3D (1.10.1) -> (1.10.2)
+- Structurify (2.0.17) -> (2.0.18)
+- Supplementaries (3.5.24) -> (3.5.25)
+- Waystones (21.1.27) -> (21.1.28)
+- WorldWeaver (21.0.18) -> (21.0.19)
 
 </details>
 
-</blockquote>
+<details open>
+<summary>Removed (8)</summary>
+
+- Better End Cities Datapack
+- BetterF3 (11.0.3)
+- Comfortable Campfires (1.1.12)
+- Default Options (21.1.15)
+- Enhanced Pastures Resource Pack
+- Fitting XP Mana Bar Resource Pack
+- Hardcore Revival (21.1.13)
+- RCT Badges Datapack
+
+</details>
+
+## Recipes
+
+<details>
+<summary>Added (0)</summary>
+<blockquote>
+
+</details>
+
+<details>
+<summary>Changed (0)</summary>
+<blockquote>
+
+</details>
+
+<details>
+<summary>Removed (0)</summary>
+<blockquote>
 
 </details>
