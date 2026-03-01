@@ -63,7 +63,6 @@ Summary of changes here:
 <summary>Removed (7)</summary>
 
 - Better End Cities Datapack
-- BetterF3 (11.0.3)
 - Comfortable Campfires (1.1.12)
 - Default Options (21.1.15)
 - Enhanced Pastures Resource Pack
