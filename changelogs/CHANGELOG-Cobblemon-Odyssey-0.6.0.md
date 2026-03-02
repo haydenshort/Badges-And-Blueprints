@@ -72,6 +72,12 @@ Summary of changes here:
 ## Recipes
 
 <details>
+<summary>Removed (0)</summary>
+<blockquote>
+
+</details>
+
+<details>
 <summary>Added (5)</summary>
 <blockquote>
 
@@ -208,8 +214,68 @@ Summary of changes here:
 
 </details>
 
+## Tags
+
 <details>
 <summary>Removed (0)</summary>
 <blockquote>
+
+</details>
+
+<details>
+<summary>Added (0)</summary>
+<blockquote>
+
+</details>
+
+<details>
+<summary>Changed (0)</summary>
+<blockquote>
+
+</details>
+
+</details>
+
+## Registries
+
+<details>
+<summary>Removed (0)</summary>
+<blockquote>
+
+</details>
+
+<details>
+<summary>Added (0)</summary>
+<blockquote>
+
+</details>
+
+<details>
+<summary>Changed (0)</summary>
+<blockquote>
+
+</details>
+
+</details>
+
+## Loot Tables
+
+<details>
+<summary>Removed (0)</summary>
+<blockquote>
+
+</details>
+
+<details>
+<summary>Added (0)</summary>
+<blockquote>
+
+</details>
+
+<details>
+<summary>Changed (0)</summary>
+<blockquote>
+
+</details>
 
 </details>
