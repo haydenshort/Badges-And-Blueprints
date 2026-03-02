@@ -32,8 +32,8 @@ Summary of changes here:
 - Bosses Rise (2.0.4) -> (2.0.5)
 - CarryOn (2.2.4.4) -> (2.2.2.11)
 - Cobbleloots: Loot Balls and More! (2.1.0) -> (2.2.2)
-- Cobblemon Raid Dens (0.7.6) -> (0.8.0)
 - Cobblemon Firework Capsules (2.1.0) -> (2.1.1)
+- Cobblemon Raid Dens (0.7.6) -> (0.8.1)
 - Extreme Sound Mufflers (3.54) -> (3.55)
 - FamiliarsLib (1.5) -> (1.6)
 - Immersive Optimizations (0.1.1) -> (0.1.4)
@@ -41,6 +41,7 @@ Summary of changes here:
 - Moonlight Lib (2.29.18) -> (2.29.20)
 - SeasonsHUD (1.13.17) -> (2.0.0)
 - Shoulder Surfing (4.21.0) -> (4.22.0)
+- Sophisticated Backpacks (3.25.30.1537) -> (3.25.30.1547)
 - Supplementaries (3.25.5) -> (3.25.6)
 
 </details>
