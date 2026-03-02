@@ -46,6 +46,7 @@ Summary of changes here:
 - SeasonsHUD (1.13.17) -> (2.0.0)
 - Shoulder Surfing (4.21.0) -> (4.22.0)
 - Sophisticated Backpacks (3.25.30.1537) -> (3.25.30.1547)
+- Sophisticated Backpacks (1.4.5.1499) -> (1.4.6.1506)
 - Supplementaries (3.25.5) -> (3.25.6)
 
 </details>
