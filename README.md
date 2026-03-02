@@ -7,7 +7,7 @@ This pack contains the Complete Cobblemon Collection Data Pack by Xca, which tri
 
 Cobblemon Changes
 ======
-## General Notes
+### General Notes
 
 As the years go on, Pokémon has become more and more "easy" to casual players. With this in mind, I opted to tweak a few things in the modpack!
 Cobblemon Odyssey will now feature an assortment of changes based around **Renegade Platinum**, **Blaze Black** and **Volt White 2 Redux** by **AphexCubed** and **Drayano**, with minor tweaks from the rom hack **Radical Red** by **soupercell**, and a few of my own personal tweaks. Listed below is a link to their Twitters, as all credit goes to them for the inspiration to make Pokemon games more competitive!
@@ -17,7 +17,7 @@ This will mainly be changes to stats, movesets, and abilities, however this is s
 + [Drayano](https://x.com/Drayano60)
 + [soupercell](https://x.com/soupacell?lang=en)
 
-## Type Changes
+### Type Changes
 
 Certain Pokémon have had their types changed to 'non-canon' combinations.
 - These include changes made in Renegade Platinum, Blaze Black 2 and Volt White 2.
