@@ -9,8 +9,6 @@ global.removedItems = [
     "bakery:small_cooking_pot",
     "farm_and_charm:cooking_pot",
     "farm_and_charm:feeding_trough",
-    "minecraft:milk_bucket",
-    "meadow:wooden_warped_milk_bucket",
     "farm_and_charm:fertilized_soil",
     "farm_and_charm:fertilized_farmland",
     "farmersdelight:bacon_and_eggs",
