@@ -9,6 +9,9 @@ Summary of changes here:
 <details open>
 <summary>Github Commits</summary>
 <blockquote>
+  
+- Updated JustHammers Recipes to better match vanilla netherite recipes.
+- Reimplemented Milk and Milk Buckets (subject to change in future).
 
 </details>
 
@@ -20,6 +23,7 @@ Summary of changes here:
 <summary>Added (1)</summary>
 
 - NeoAuth (1.0.0)
+- Simple Backups (4.0.28)
 
 </details>
 
@@ -55,6 +59,7 @@ Summary of changes here:
 <summary>Shader Packs</summary>
 
 - MakeUp Ultra Fast
+
 </details>
 
 </details>
@@ -67,8 +72,133 @@ Summary of changes here:
 ## Recipes
 
 <details>
-<summary>Added (0)</summary>
+<summary>Added (5)</summary>
 <blockquote>
+
+<details>
+<summary>justhammers/kjs/netherite_hammer</summary>
+  
+```diff
++{
++  "type": "minecraft:smithing_transform",
++  "template": {
++    "item": "minecraft:netherite_upgrade_smithing_template"
++  },
++  "base": {
++    "item": "justhammers:diamond_hammer"
++  },
++  "addition": {
++    "item": "minecraft:netherite_ingot"
++  },
++  "result": {
++    "item": "justhammers:netherite_hammer"
++  }
++}
++ kubejs_changed_marker: {
++    source: "server_scripts:recipes/add_misc_recipes.js"
++    line: 24
+```
+</details>
+
+<details>
+<summary>justhammers/kjs/netherite_impact_hammer</summary>
+  
+```diff
++{
++  "type": "minecraft:smithing_transform",
++  "template": {
++    "item": "justhammers:impact_core"
++  },
++  "base": {
++    "item": "justhammers:diamond_impact_hammer"
++  },
++  "addition": {
++    "item": "minecraft:netherite_block"
++  },
++  "result": {
++    "item": "justhammers:netherite_impact_hammer"
++  }
++}
++ kubejs_changed_marker: {
++    source: "server_scripts:recipes/add_misc_recipes.js"
++    line: 30
+```
+</details>
+
+<details>
+<summary>justhammers/kjs/netherite_reinforced_hammer</summary>
+
+```diff
++{
++  "type": "minecraft:smithing_transform",
++  "template": {
++    "item": "justhammers:reinforced_core"
++  },
++  "base": {
++    "item": "justhammers:diamond_reinforced_hammer"
++  },
++  "addition": {
++    "item": "minecraft:netherite_block"
++  },
++  "result": {
++    "item": "justhammers:netherite_reinforced_hammer"
++  }
++}
++ kubejs_changed_marker: {
++    source: "server_scripts:recipes/add_misc_recipes.js"
++    line: 36
+```
+</details>
+
+<details>
+<summary>justhammers/kjs/netherite_reinforced_impact_hammer</summary>
+
+```diff
++{
++  "type": "minecraft:smithing_transform",
++  "template": {
++    "item": "justhammers:reinforced_impact_core"
++  },
++  "base": {
++    "item": "justhammers:diamond_reinforced_impact_hammer"
++  },
++  "addition": {
++    "item": "minecraft:netherite_block"
++  },
++  "result": {
++    "item": "justhammers:netherite_reinforced_impact_hammer"
++  }
++}
++ kubejs_changed_marker: {
++    source: "server_scripts:recipes/add_misc_recipes.js"
++    line: 24
+```
+</details>
+
+<details>
+<summary>justhammers/kjs/netherite_destructor_hammer</summary>
+
+```diff
++{
++  "type": "minecraft:smithing_transform",
++  "template": {
++    "item": "justhammers:destructor_core"
++  },
++  "base": {
++    "item": "justhammers:diamond_destructor_hammer"
++  },
++  "addition": {
++    "item": "minecraft:netherite_block"
++  },
++  "result": {
++    "item": "justhammers:netherite_destructor_hammer"
++  }
++}
++ kubejs_changed_marker: {
++    source: "server_scripts:recipes/add_misc_recipes.js"
++    line: 48
+```
+</details>
 
 </details>
 
