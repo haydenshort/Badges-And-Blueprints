@@ -29,7 +29,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .site-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 52px; letter-spacing: 4px; color: var(--text); line-height: 1.1; }
 
 /* ── Search ────────────────────────────────────────────────────── */
-.search-wrap { max-width: 960px; margin: 0 auto; padding: 10px 18px; position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--border); }
+.search-wrap { max-width: 960px; margin: 0 auto; padding: 10px 18px; position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--border); transition: opacity 0.25s; }
+.search-wrap.tile-open { pointer-events: none; opacity: 0.4; z-index: 20; }
+.body-locked { overflow: hidden !important; }
 .search-wrap input {
   width: 100%; background: var(--surface); border: 1px solid var(--border);
   border-radius: 8px; padding: 12px 18px; color: var(--text);
@@ -57,6 +59,36 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 }
 .pokemon-card:hover { box-shadow: 0 4px 24px #0006; }
 .hidden-card { display: none; }
+
+/* ── Desktop expanded row ──────────────────────────────────────── */
+.pokemon-card.desktop-expanded {
+  position: fixed;
+  z-index: 40;
+  overflow-y: auto !important;
+  border-radius: 14px;
+  box-shadow: 0 24px 80px #000a;
+}
+.pokemon-card.desktop-expanded .card-body.open { max-height: none; }
+.desktop-overlay {
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.desktop-overlay.visible { opacity: 1; }
+.desktop-dim {
+  opacity: 0.15;
+  pointer-events: none;
+  transition: opacity 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+.desktop-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: #0008;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.desktop-overlay.visible { opacity: 1; }
 .pokemon-card.tile-hidden { display: none !important; }
 
 /* ── Card Header ───────────────────────────────────────────────── */
@@ -213,21 +245,18 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
   }
   .pokemon-card.animating {
     position: fixed;
-    z-index: 100;
-    transition: left 0.38s cubic-bezier(0.4,0,0.2,1),
-                top 0.38s cubic-bezier(0.4,0,0.2,1),
-                width 0.38s cubic-bezier(0.4,0,0.2,1),
-                height 0.38s cubic-bezier(0.4,0,0.2,1),
-                border-radius 0.38s cubic-bezier(0.4,0,0.2,1);
-    will-change: left, top, width, border-radius;
+    z-index: 40;
+    transition: left 0.45s cubic-bezier(0.22,1,0.36,1),
+                top 0.45s cubic-bezier(0.22,1,0.36,1),
+                width 0.45s cubic-bezier(0.22,1,0.36,1),
+                height 0.45s cubic-bezier(0.22,1,0.36,1),
+                border-radius 0.45s cubic-bezier(0.22,1,0.36,1),
+                box-shadow 0.45s cubic-bezier(0.22,1,0.36,1);
+    will-change: left, top, width, height, border-radius;
   }
   .pokemon-card.expanded {
     position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
+    z-index: 40;
     overflow-y: auto;
     border-radius: 16px;
   }
@@ -240,7 +269,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
     pointer-events: none;
     transition: opacity 0.25s cubic-bezier(0.4,0,0.2,1);
   }
-  .body-locked { overflow: hidden; }
+
 
   .card-header {
     flex-direction: column; align-items: center; justify-content: center;
@@ -288,6 +317,42 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
   0%, 49%  { transform: translateY(-4px); }
   50%, 99% { transform: translateY(-6px); }
   100%     { transform: translateY(-4px); }
+}
+
+/* ── Ability Tooltip ───────────────────────────────────────────── */
+.ability-slot { position: relative; cursor: pointer; }
+.ability-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1c26;
+  border: 1px solid #4f5aff55;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--text-dim);
+  white-space: normal;
+  width: 200px;
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  box-shadow: 0 8px 24px #0008;
+  line-height: 1.5;
+}
+.ability-tooltip .tt-name {
+  display: block;
+  font-weight: 700;
+  color: var(--text);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.ability-tooltip.tt-visible { opacity: 1; }
+.ability-tooltip.tt-flip {
+  top: auto;
+  bottom: calc(100% + 8px);
 }
 </style>
 </head>
@@ -1137,9 +1202,13 @@ function toggle(header) {
       h.classList.remove('active');
       c.classList.remove('expanded');
       c.classList.remove('animating');
+      c.classList.remove('desktop-expanded');
       const s = h.querySelector('.pokemon-sprite');
       if (s) s.classList.remove('bobbing');
       h.nextElementSibling.classList.remove('open');
+      document.querySelectorAll('.desktop-dim').forEach(d => d.classList.remove('desktop-dim'));
+      document.body.classList.remove('body-locked');
+      if (c._overlay) { c._overlay.remove(); c._overlay = null; }
     }
   });
 
@@ -1167,22 +1236,26 @@ function toggle(header) {
       card.parentNode.insertBefore(placeholder, card);
       card._placeholder = placeholder;
 
-      // Lock body scroll
+      // Lock body scroll and dim search bar
       document.body.classList.add('body-locked');
+      document.querySelector('.search-wrap').classList.add('tile-open');
 
       // Pin card at its current position
-      card.style.left  = rect.left + 'px';
-      card.style.top   = rect.top + 'px';
-      card.style.width = rect.width + 'px';
+      const searchH = document.querySelector('.search-wrap').offsetHeight;
+      card._searchBarH = searchH;
+      card.style.left         = rect.left + 'px';
+      card.style.top          = rect.top + 'px';
+      card.style.width        = rect.width + 'px';
+      card.style.borderRadius = '12px';
       card.classList.add('animating');
 
-      // Animate to full width at top of viewport
+      // Animate to full width below search bar
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          const gap = 8;
-          card.style.left  = gap + 'px';
-          card.style.top   = gap + 'px';
-          card.style.width = (window.innerWidth - gap * 2) + 'px';
+          card.style.left   = '0';
+          card.style.top    = searchH + 'px';
+          card.style.width  = '100vw';
+          card.style.height = 'calc(100vh - ' + searchH + 'px)';
         });
       });
 
@@ -1190,15 +1263,83 @@ function toggle(header) {
       setTimeout(() => {
         card.classList.remove('animating');
         card.classList.add('expanded');
-        card.style.left  = '';
-        card.style.top   = '';
-        card.style.width = '';
+        card.style.left         = '0';
+        card.style.top          = searchH + 'px';
+        card.style.width        = '100vw';
+        card.style.height       = 'calc(100vh - ' + searchH + 'px)';
+        card.style.borderRadius = '16px';
         body.classList.add('open');
-      }, 420);
+      }, 450);
 
     } else {
-      card.classList.add('expanded');
-      setTimeout(() => { body.classList.add('open'); }, 180);
+      // Save card rect and scroll
+      const desktopRect = card.getBoundingClientRect();
+      card._desktopRect = { left: desktopRect.left, top: desktopRect.top, width: desktopRect.width, height: desktopRect.height };
+      card._savedScrollY = window.scrollY;
+
+      // Target: centered, capped width and height
+      const targetW = Math.min(860, window.innerWidth * 0.92);
+      const targetH = Math.min(window.innerHeight * 0.8, 700);
+      const targetL = (window.innerWidth - targetW) / 2;
+      const targetT = (window.innerHeight - targetH) / 2;
+      card._desktopTarget = { left: targetL, top: targetT, width: targetW, height: targetH };
+
+      // Dim other cards + add overlay (hidden at first)
+      document.querySelectorAll('.pokemon-card').forEach(c => {
+        if (c !== card) c.classList.add('desktop-dim');
+      });
+      document.querySelector('.search-wrap').classList.add('tile-open');
+      const overlay = document.createElement('div');
+      overlay.className = 'desktop-overlay';
+      overlay.addEventListener('click', () => toggle(header));
+      document.body.appendChild(overlay);
+      card._overlay = overlay;
+      document.body.classList.add('body-locked');
+
+      // Insert placeholder to hold the row's space
+      const desktopPlaceholder = document.createElement('div');
+      desktopPlaceholder.style.width      = desktopRect.width + 'px';
+      desktopPlaceholder.style.height     = desktopRect.height + 'px';
+      desktopPlaceholder.style.flexShrink = '0';
+      desktopPlaceholder.style.visibility = 'hidden';
+      desktopPlaceholder.style.pointerEvents = 'none';
+      card.parentNode.insertBefore(desktopPlaceholder, card);
+      card._desktopPlaceholder = desktopPlaceholder;
+
+      // Pin card at current position
+      card.style.position     = 'fixed';
+      card.style.zIndex       = '40';
+      card.style.left         = desktopRect.left + 'px';
+      card.style.top          = desktopRect.top + 'px';
+      card.style.width        = desktopRect.width + 'px';
+      card.style.height       = desktopRect.height + 'px';
+      card.style.borderRadius = '10px';
+      card.classList.add('animating');
+
+      // Animate to center
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          overlay.classList.add('visible');
+          card.style.left         = targetL + 'px';
+          card.style.top          = targetT + 'px';
+          card.style.width        = targetW + 'px';
+          card.style.height       = targetH + 'px';
+          card.style.borderRadius = '14px';
+          card.style.boxShadow    = '0 24px 80px #000a';
+        });
+      });
+
+      // Lock as expanded, open content
+      setTimeout(() => {
+        card.classList.remove('animating');
+        card.classList.add('desktop-expanded');
+        card.style.left         = targetL + 'px';
+        card.style.top          = targetT + 'px';
+        card.style.width        = targetW + 'px';
+        card.style.height       = targetH + 'px';
+        card.style.borderRadius = '14px';
+        body.classList.add('open');
+      }, 420);
     }
 
   } else {
@@ -1210,11 +1351,13 @@ function toggle(header) {
 
     if (isMobile) {
       setTimeout(() => {
+        const searchH = card._searchBarH || document.querySelector('.search-wrap').offsetHeight;
         card.classList.remove('expanded');
         card.classList.add('animating');
         card.style.left         = '0';
-        card.style.top          = '0';
+        card.style.top          = searchH + 'px';
         card.style.width        = '100vw';
+        card.style.height       = 'calc(100vh - ' + searchH + 'px)';
         card.style.borderRadius = '16px';
 
         // Restore scroll so placeholder is at original position
@@ -1227,9 +1370,11 @@ function toggle(header) {
             const targetRect = placeholder
               ? placeholder.getBoundingClientRect()
               : card._savedTileRect;
-            card.style.left  = targetRect.left + 'px';
-            card.style.top   = targetRect.top + 'px';
-            card.style.width = targetRect.width + 'px';
+            card.style.left         = targetRect.left + 'px';
+            card.style.top          = targetRect.top + 'px';
+            card.style.width        = targetRect.width + 'px';
+            card.style.height       = card._savedTileRect.height + 'px';
+            card.style.borderRadius = '12px';
           });
         });
 
@@ -1238,18 +1383,70 @@ function toggle(header) {
           card.style.left         = '';
           card.style.top          = '';
           card.style.width        = '';
-          card.style.borderRadius = '';
           card.style.height       = '';
+          card.style.borderRadius = '';
           if (placeholder) placeholder.remove();
           card._placeholder = null;
           // Undim all tiles and unlock scroll
           document.querySelectorAll('.tile-dimmed').forEach(c => c.classList.remove('tile-dimmed'));
           document.body.classList.remove('body-locked');
-        }, 420);
+          document.querySelector('.search-wrap').classList.remove('tile-open');
+        }, 450);
       }, 100);
 
     } else {
-      card.classList.remove('expanded');
+      const target = card._desktopTarget;
+      const origin = card._desktopRect;
+      const overlay = card._overlay;
+
+      // Pin at expanded position
+      card.classList.remove('desktop-expanded');
+      card.classList.add('animating');
+      card.style.position     = 'fixed';
+      card.style.zIndex       = '40';
+      card.style.left         = target.left + 'px';
+      card.style.top          = target.top + 'px';
+      card.style.width        = target.width + 'px';
+      card.style.height       = target.height + 'px';
+      card.style.borderRadius = '14px';
+      card.style.boxShadow    = '0 24px 80px #000a';
+
+      // Restore scroll
+      if (card._savedScrollY !== undefined) {
+        window.scrollTo({ top: card._savedScrollY, behavior: 'instant' });
+      }
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          // Fade out overlay
+          if (overlay) overlay.classList.remove('visible');
+          // Animate back to original tile position
+          const targetRect = card.getBoundingClientRect();
+          card.style.left         = origin.left + 'px';
+          card.style.top          = origin.top + 'px';
+          card.style.width        = origin.width + 'px';
+          card.style.height       = origin.height + 'px';
+          card.style.borderRadius = '10px';
+          card.style.boxShadow    = '';
+        });
+      });
+
+      setTimeout(() => {
+        card.classList.remove('animating');
+        card.style.position     = '';
+        card.style.zIndex       = '';
+        card.style.left         = '';
+        card.style.top          = '';
+        card.style.width        = '';
+        card.style.height       = '';
+        card.style.borderRadius = '';
+        card.style.boxShadow    = '';
+        document.querySelectorAll('.desktop-dim').forEach(c => c.classList.remove('desktop-dim'));
+        document.body.classList.remove('body-locked');
+        document.querySelector('.search-wrap').classList.remove('tile-open');
+        if (overlay) { overlay.remove(); card._overlay = null; }
+        if (card._desktopPlaceholder) { card._desktopPlaceholder.remove(); card._desktopPlaceholder = null; }
+      }, 450);
     }
   }
 }
@@ -1262,6 +1459,291 @@ function filterCards() {
     card.classList.toggle('hidden-card', q && !name.includes(q) && !num.includes(q));
   });
 }
+
+const ABILITY_DESC = {
+  'Adaptability': 'Powers up moves of the same type.',
+  'Aerilate': 'Turns Normal-type moves into Flying-type moves.',
+  'Aftermath': 'Damages the attacker landing the finishing hit.',
+  'Air Lock': 'Eliminates the effects of weather.',
+  'Analytic': 'Boosts move power when the Pokémon moves last.',
+  'Anger Point': 'Maxes Attack after taking a critical hit.',
+  'Anticipation': 'Senses a foe\'s dangerous moves.',
+  'Arena Trap': 'Prevents the foe from fleeing.',
+  'Aura Break': 'Reduces power of Dark- and Fairy-type moves.',
+  'Bad Dreams': 'Reduces a sleeping foe\'s HP.',
+  'Battle Armor': 'The Pokémon is protected against critical hits.',
+  'Beast Boost': 'Boosts its most proficient stat each time it knocks out a Pokémon.',
+  'Berserk': 'Raises Special Attack when HP drops below half.',
+  'Big Pecks': 'Protects the Pokémon from Defense-lowering attacks.',
+  'Blaze': 'Powers up Fire-type moves in a pinch.',
+  'Bulletproof': 'Protects the Pokémon from ball and bomb moves.',
+  'Cheek Pouch': 'Restores additional HP when a Berry is consumed.',
+  'Chlorophyll': 'Boosts the Pokémon\'s Speed in sunshine.',
+  'Clear Body': 'Prevents other Pokémon from lowering its stats.',
+  'Cloud Nine': 'Eliminates the effects of weather.',
+  'Color Change': 'Changes the Pokémon\'s type to the foe\'s move.',
+  'Competitive': 'Sharply raises Special Attack when stats are lowered.',
+  'Compound Eyes': 'The Pokémon\'s accuracy is boosted.',
+  'Contrary': 'Makes stat changes have an opposite effect.',
+  'Corrosion': 'The Pokémon can poison Steel and Poison types.',
+  'Cursed Body': 'May disable a move used on the Pokémon.',
+  'Cute Charm': 'Contact with the Pokémon may cause infatuation.',
+  'Damp': 'Prevents the use of self-destructing moves.',
+  'Dancer': 'Copies the foe\'s Dance moves.',
+  'Dark Aura': 'Raises power of Dark-type moves for all Pokémon in battle.',
+  'Dauntless Shield': 'Boosts Defense in battle.',
+  'Dazzling': 'Protects the Pokémon from high-priority moves.',
+  'Defeatist': 'Lowers stats when HP drops below half.',
+  'Defiant': 'Sharply raises Attack when the Pokémon\'s stats are lowered.',
+  'Disguise': 'Avoids damage for one turn.',
+  'Download': 'Adjusts power according to a foe\'s defenses.',
+  'Drizzle': 'The Pokémon makes it rain when it enters a battle.',
+  'Drought': 'Turns the sunlight harsh when the Pokémon enters a battle.',
+  'Dry Skin': 'Reduces HP if it is hot. Water restores HP.',
+  'Early Bird': 'The Pokémon awakens quickly from sleep.',
+  'Effect Spore': 'Contact may poison, paralyze, or cause sleep.',
+  'Electric Surge': 'Creates an Electric Terrain when entering a battle.',
+  'Fairy Aura': 'Raises power of Fairy-type moves for all Pokémon in battle.',
+  'Filter': 'Reduces damage from super-effective attacks.',
+  'Flame Body': 'Contact with the Pokémon may burn the attacker.',
+  'Flare Boost': 'Powers up special attacks when burned.',
+  'Flash Fire': 'Powers up Fire-type moves if hit by one.',
+  'Flower Gift': 'Powers up party Pokémon when it is sunny.',
+  'Flower Veil': 'Prevents lowering of ally Grass-type Pokémon\'s stats.',
+  'Fluffy': 'Halves damage from contact moves, but doubles damage from Fire-type moves.',
+  'Forecast': 'Castform transforms with the weather.',
+  'Forewarn': 'Determines what moves a foe has.',
+  'Friend Guard': 'Reduces damage done to allies.',
+  'Frisk': 'The Pokémon can check a foe\'s held item.',
+  'Fur Coat': 'Reduces damage from physical moves.',
+  'Gale Wings': 'Gives priority to Flying-type moves.',
+  'Galvanize': 'Normal-type moves become Electric-type and get a power boost.',
+  'Gluttony': 'Encourages the early use of a held Berry.',
+  'Gooey': 'Contact lowers the attacker\'s Speed stat.',
+  'Gorilla Tactics': 'Boosts Attack but only allows use of the first selected move.',
+  'Grass Pelt': 'Boosts the Defense stat in Grassy Terrain.',
+  'Grassy Surge': 'Creates a Grassy Terrain when entering a battle.',
+  'Guts': 'Boosts Attack if there is a status problem.',
+  'Harvest': 'May create another Berry after one is used.',
+  'Healer': 'May heal an ally\'s status conditions.',
+  'Heatproof': 'Weakens the power of Fire-type moves.',
+  'Heavy Metal': 'Doubles the Pokémon\'s weight.',
+  'Honey Gather': 'The Pokémon may gather Honey.',
+  'Huge Power': 'Raises the Pokémon\'s Attack stat.',
+  'Hustle': 'Boosts Attack stat, but lowers accuracy.',
+  'Hydration': 'Heals status problems if it is raining.',
+  'Hyper Cutter': 'Prevents other Pokémon from lowering Attack stat.',
+  'Ice Body': 'The Pokémon gradually regains HP in a hailstorm.',
+  'Ice Scales': 'Halves damage from Special moves.',
+  'Illuminate': 'Raises the likelihood of meeting wild Pokémon.',
+  'Illusion': 'Enters battle disguised as the last Pokémon in the party.',
+  'Immunity': 'Prevents the Pokémon from getting poisoned.',
+  'Imposter': 'Transforms itself into the Pokémon it is facing.',
+  'Infiltrator': 'Passes through the foe\'s barrier and strikes.',
+  'Inner Focus': 'The Pokémon is protected from flinching.',
+  'Insomnia': 'Prevents the Pokémon from falling asleep.',
+  'Intimidate': 'Lowers the foe\'s Attack stat.',
+  'Iron Barbs': 'Inflicts damage to the Pokémon on contact.',
+  'Iron Fist': 'Boosts the power of punching moves.',
+  'Justified': 'Raises Attack when hit by a Dark-type move.',
+  'Keen Eye': 'Prevents other Pokémon from lowering accuracy.',
+  'Klutz': 'The Pokémon can\'t use any held items.',
+  'Leaf Guard': 'Prevents status problems in sunny weather.',
+  'Levitate': 'Gives immunity to Ground-type moves.',
+  'Libero': 'Changes the Pokémon\'s type to its last used move.',
+  'Lightning Rod': 'Draws in all Electric-type moves to boost Sp. Attack.',
+  'Limber': 'The Pokémon is protected from paralysis.',
+  'Liquid Ooze': 'Damages attackers using any draining move.',
+  'Liquid Voice': 'All sound-based moves become Water-type moves.',
+  'Long Reach': 'Uses moves without making contact with the target.',
+  'Magic Bounce': 'Reflects status-changing moves.',
+  'Magic Guard': 'Protects the Pokémon from indirect damage.',
+  'Magician': 'Steals the held item of a Pokémon it hits.',
+  'Magma Armor': 'Prevents the Pokémon from becoming frozen.',
+  'Magnet Pull': 'Prevents Steel-type Pokémon from escaping.',
+  'Marvel Scale': 'Ups Defense if there is a status problem.',
+  'Mega Launcher': 'Boosts the power of aura and pulse moves.',
+  'Merciless': 'Attacks become critical hits if the target is poisoned.',
+  'Minus': 'Ups Sp. Atk if another Pokémon has Plus or Minus.',
+  'Mold Breaker': 'Moves can be used regardless of Abilities.',
+  'Moody': 'Raises one stat and lowers another.',
+  'Motor Drive': 'Raises Speed if hit by an Electric-type move.',
+  'Moxie': 'Boosts Attack after knocking out any Pokémon.',
+  'Multiscale': 'Reduces damage when HP is full.',
+  'Multitype': 'Changes type to match the held Plate.',
+  'Mummy': 'Contact with this Pokémon spreads this Ability.',
+  'Natural Cure': 'All status problems heal when it switches out.',
+  'No Guard': 'Ensures attacks by or against the Pokémon land.',
+  'Normalize': 'All the Pokémon\'s moves become the Normal type.',
+  'Oblivious': 'Prevents it from becoming infatuated.',
+  'Overcoat': 'Protects the Pokémon from weather damage.',
+  'Overgrow': 'Powers up Grass-type moves in a pinch.',
+  'Own Tempo': 'Prevents the Pokémon from becoming confused.',
+  'Parental Bond': 'Allows the Pokémon to attack twice.',
+  'Pick Up': 'The Pokémon may pick up items.',
+  'Pickpocket': 'Steals an item when hit by another Pokémon.',
+  'Pixilate': 'Turns Normal-type moves into Fairy-type moves.',
+  'Plus': 'Ups Sp. Atk if another Pokémon has Plus or Minus.',
+  'Poison Heal': 'Restores HP if the Pokémon is poisoned.',
+  'Poison Point': 'Contact with the Pokémon may poison the attacker.',
+  'Poison Touch': 'May poison targets when the Pokémon makes contact.',
+  'Prankster': 'Gives priority to a status move.',
+  'Pressure': 'The Pokémon raises the foe\'s PP usage.',
+  'Primordial Sea': 'Makes it rain heavily when the ability activates.',
+  'Prism Armor': 'Reduces damage from super-effective attacks.',
+  'Protean': 'Changes the Pokémon\'s type to its last used move.',
+  'Psychic Surge': 'Creates a Psychic Terrain when entering a battle.',
+  'Pure Power': 'Raises the Pokémon\'s Attack stat.',
+  'Quick Feet': 'Boosts Speed if there is a status problem.',
+  'Rain Dish': 'The Pokémon gradually regains HP in rain.',
+  'Rattled': 'Bug, Ghost, or Dark-type moves scare the Pokémon and boost its Speed.',
+  'Reckless': 'Powers up moves that have recoil damage.',
+  'Refrigerate': 'Turns Normal-type moves into Ice-type moves.',
+  'Regenerator': 'Restores a little HP when withdrawn from battle.',
+  'Rock Head': 'Protects the Pokémon from recoil damage.',
+  'Rough Skin': 'Inflicts damage to the foe on contact.',
+  'Run Away': 'Enables sure escape from wild Pokémon.',
+  'Sand Force': 'Boosts Rock, Steel, and Ground moves in a sandstorm.',
+  'Sand Rush': 'Boosts the Pokémon\'s Speed in a sandstorm.',
+  'Sand Stream': 'The Pokémon summons a sandstorm in battle.',
+  'Sand Veil': 'Boosts the Pokémon\'s evasion in a sandstorm.',
+  'Sap Sipper': 'Absorbs Grass-type moves, boosting Attack stat.',
+  'Scrappy': 'Enables moves to hit Ghost-type Pokémon.',
+  'Serene Grace': 'Boosts the likelihood of additional effects occurring.',
+  'Shadow Tag': 'Prevents the foe from escaping.',
+  'Shed Skin': 'The Pokémon may heal its own status problems.',
+  'Sheer Force': 'Removes additional effects to boost move power.',
+  'Shell Armor': 'The Pokémon is protected against critical hits.',
+  'Shield Dust': 'Blocks the additional effects of attacks.',
+  'Simple': 'The Pokémon is prone to wild stat changes.',
+  'Skill Link': 'Increases the frequency of multi-strike moves.',
+  'Slush Rush': 'Boosts the Pokémon\'s Speed in a hailstorm.',
+  'Snow Cloak': 'Boosts the Pokémon\'s evasion in a hailstorm.',
+  'Snow Warning': 'The Pokémon summons a hailstorm in battle.',
+  'Solar Power': 'In sunshine, Sp. Atk is boosted but HP decreases.',
+  'Solid Rock': 'Reduces damage from super-effective attacks.',
+  'Speed Boost': 'Its Speed stat is gradually boosted.',
+  'Stall': 'The Pokémon moves after all other Pokémon do.',
+  'Stamina': 'Boosts Defense when hit by any move.',
+  'Static': 'Contact with the Pokémon may cause paralysis.',
+  'Steadfast': 'Raises Speed each time the Pokémon flinches.',
+  'Steelworker': 'Powers up Steel-type moves.',
+  'Stench': 'By releasing stench when attacking, may cause flinching.',
+  'Sticky Hold': 'Protects the Pokémon from item theft.',
+  'Storm Drain': 'Draws in all Water-type moves to boost Sp. Attack.',
+  'Strong Jaw': 'The Pokémon\'s strong jaw boosts biting moves.',
+  'Sturdy': 'It cannot be knocked out with one hit.',
+  'Suction Cups': 'Negates all moves that force switching out.',
+  'Super Luck': 'Heightens the critical-hit ratios of moves.',
+  'Swarm': 'Powers up Bug-type moves in a pinch.',
+  'Swift Swim': 'Boosts the Pokémon\'s Speed in rain.',
+  'Synchronize': 'Passes a burn, poison, or paralysis to the foe.',
+  'Tangled Feet': 'Raises evasion if the Pokémon is confused.',
+  'Tangling Hair': 'Contact lowers the attacker\'s Speed stat.',
+  'Technician': 'Powers up the Pokémon\'s weaker moves.',
+  'Telepathy': 'Anticipates an ally\'s attack and dodges it.',
+  'Thick Fat': 'Ups resistance to Fire- and Ice-type moves.',
+  'Tinted Lens': 'Powers up not very effective moves.',
+  'Torrent': 'Powers up Water-type moves in a pinch.',
+  'Tough Claws': 'Strengthens moves that make direct contact.',
+  'Toxic Boost': 'Powers up physical attacks when poisoned.',
+  'Trace': 'The Pokémon copies a foe\'s Ability.',
+  'Truant': 'The Pokémon can\'t use a move the following turn.',
+  'Turboblaze': 'Moves can be used regardless of Abilities.',
+  'Unaware': 'Ignores any stat changes in the Pokémon.',
+  'Unburden': 'Raises Speed if the Pokémon\'s held item is used.',
+  'Unnerve': 'Makes the foe nervous and unable to eat Berries.',
+  'Victory Star': 'Boosts the accuracy of its allies and itself.',
+  'Vital Spirit': 'Prevents the Pokémon from falling asleep.',
+  'Volt Absorb': 'Restores HP if hit by an Electric-type move.',
+  'Water Absorb': 'Restores HP if hit by a Water-type move.',
+  'Water Bubble': 'Lowers the power of Fire-type moves and prevents burns.',
+  'Water Veil': 'Prevents the Pokémon from getting a burn.',
+  'Weak Armor': 'Physical attacks lower Defense but sharply raise Speed.',
+  'White Smoke': 'Prevents other Pokémon from lowering its stats.',
+  'Wonder Guard': 'Only super-effective moves will hit.',
+  'Wonder Skin': 'Makes status moves more likely to miss.',
+  'Zen Mode': 'Changes form when HP drops below half.',
+};
+
+function showAbilityTooltip(el) {
+  // Get ability name from text content (strip the slot tag)
+  const slotTag = el.querySelector('.slot-tag');
+  const name = el.textContent.replace(slotTag ? slotTag.textContent : '', '').trim();
+  const desc = ABILITY_DESC[name];
+  if (!desc) return;
+
+  // Remove any existing tooltips
+  document.querySelectorAll('.ability-tooltip').forEach(t => t.remove());
+
+  const rect = el.getBoundingClientRect();
+  const tt = document.createElement('div');
+  tt.className = 'ability-tooltip';
+  tt.innerHTML = '<span class="tt-name">' + name + '</span>' + desc;
+
+  // Append to body so parent opacity doesn't affect it
+  document.body.appendChild(tt);
+  tt._sourceEl = el;
+
+  // Position relative to the ability slot
+  const scrollY = window.scrollY;
+  const scrollX = window.scrollX;
+  tt.style.position = 'fixed';
+  tt.style.width = '200px';
+  tt.style.left = (rect.left + rect.width / 2) + 'px';
+  tt.style.transform = 'translateX(-50%)';
+  tt.style.zIndex = '9999';
+
+  // Flip upward if too close to bottom
+  if (rect.bottom > window.innerHeight - 150) {
+    tt.style.top = 'auto';
+    tt.style.bottom = (window.innerHeight - rect.top + 8) + 'px';
+  } else {
+    tt.style.top = (rect.bottom + 8) + 'px';
+    tt.style.bottom = 'auto';
+  }
+
+  requestAnimationFrame(() => tt.classList.add('tt-visible'));
+}
+
+function hideAbilityTooltip(el) {
+  document.querySelectorAll('.ability-tooltip').forEach(tt => {
+    if (tt._sourceEl === el) {
+      tt.classList.remove('tt-visible');
+      setTimeout(() => tt.remove(), 150);
+    }
+  });
+}
+
+// Attach events to all ability slots
+function initAbilityTooltips() {
+  document.querySelectorAll('.ability-slot').forEach(el => {
+    // Desktop: hover
+    el.addEventListener('mouseenter', () => showAbilityTooltip(el));
+    el.addEventListener('mouseleave', () => hideAbilityTooltip(el));
+    // Mobile: tap
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const existing = [...document.querySelectorAll('.ability-tooltip')].find(t => t._sourceEl === el);
+      if (existing) {
+        hideAbilityTooltip(el);
+      } else {
+        document.querySelectorAll('.ability-tooltip').forEach(t => t.remove());
+        showAbilityTooltip(el);
+      }
+    });
+  });
+  // Tap elsewhere closes tooltips on mobile
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.ability-tooltip').forEach(t => t.remove());
+  });
+}
+
+// Init on load, and re-init if new cards ever open
+document.addEventListener('DOMContentLoaded', initAbilityTooltips);
+// Also init immediately in case DOM is already ready
+initAbilityTooltips();
+
 </script>
 </body>
 </html>
