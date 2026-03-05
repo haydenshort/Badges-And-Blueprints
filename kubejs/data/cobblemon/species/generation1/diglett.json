@@ -178,7 +178,6 @@
       "result": "dugtrio",
       "consumeHeldItem": false,
       "learnableMoves": [
-        "sandtomb"
       ],
       "requirements": [
         {
@@ -207,7 +206,7 @@
         "alolan"
       ],
       "abilities": [
-        "sandveil",
+        "sandforce",
         "tanglinghair",
         "h:sandforce"
       ],
@@ -301,7 +300,6 @@
           "result": "dugtrio alolan",
           "consumeHeldItem": false,
           "learnableMoves": [
-            "sandtomb"
           ],
           "requirements": [
             {
