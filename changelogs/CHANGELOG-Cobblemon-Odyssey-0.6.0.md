@@ -1,5 +1,3 @@
-Here's the reformatted changelog:
-
 ````markdown
 # Changelog
 
