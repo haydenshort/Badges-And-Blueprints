@@ -15,10 +15,11 @@ Summary of changes here:
 - Replaced CCC Resource/Data Pack with Mod.
 - Cobbreeding Tweaks
   - Increased time it takes to hatch eggs.
-  - Increased Shiny odds (Masuda 2x, Crystal 2x, Always 8x)
+  - Increased Shiny odds (Masuda 2x, Crystal 4x, Always 8x)
   - Custom egg colors!
   - Decreased breeding pasture size.
   - Enabled the ability to see stats of eggs.
+- Added SimpleTMs to Cobbleloot Loot Balls.
 
 </details>
 
@@ -57,6 +58,7 @@ Summary of changes here:
 - Cobblemon: PlayerXP (1.0.6) -> (1.0.7)
 - Cobblemon Raid Dens (0.7.6) -> (0.8.1)
 - Ender's Delight (1.1.0) -> (1.2.0)
+- Exposure (1.9.13) -> (1.9.14)
 - Extreme Sound Mufflers (3.54) -> (3.55)
 - FamiliarsLib (1.5) -> (1.6)
 - GeckoLib (4.8.3) -> (4.8.4)
@@ -289,13 +291,31 @@ Summary of changes here:
 +  "type": "minecraft:tag",
 +  "name": "simpletms:tr_items",
 +  "expand": true,
-+  "weight": 10
++  "weight": 10,
++  "functions": [
++    {
++      "function": "minecraft:set_count",
++      "count": {
++        "min": 1,
++        "max": 1
++      }
++    }
++  ]
 +},
 +{
 +  "type": "minecraft:tag",
 +  "name": "simpletms:tm_items",
 +  "expand": true,
-+  "weight": 1
++  "weight": 1,
++  "functions": [
++    {
++      "function": "minecraft:set_count",
++      "count": {
++        "min": 1,
++        "max": 1
++      }
++    }
++  ]
 +}
 
 ```
@@ -309,55 +329,144 @@ Summary of changes here:
 +  "type": "minecraft:tag",
 +  "name": "simpletms:tr_items",
 +  "expand": true,
-+  "weight": 10
++  "weight": 10,
++  "functions": [
++    {
++      "function": "minecraft:set_count",
++      "count": {
++        "min": 1,
++        "max": 1
++      }
++    }
++  ]
 +},
 +{
 +  "type": "minecraft:tag",
 +  "name": "simpletms:tm_items",
 +  "expand": true,
-+  "weight": 1
++  "weight": 1,
++  "functions": [
++    {
++      "function": "minecraft:set_count",
++      "count": {
++        "min": 1,
++        "max": 1
++      }
++    }
++  ]
 +}
 
+```
+</details>
+
+<details>
+<summary>cobbleloots/loot_table/loot_ball/heal</summary>
+
+```diff
++{
++  "type": "minecraft:tag",
++  "name": "simpletms:tr_items",
++  "expand": true,
++  "weight": 15,
++  "functions": [
++    {
++      "function": "minecraft:set_count",
++      "count": {
++        "min": 1,
++        "max": 1
++      }
++    }
++  ]
++},
++{
++  "type": "minecraft:tag",
++  "name": "simpletms:tm_items",
++  "expand": true,
++  "weight": 2,
++  "functions": [
++    {
++      "function": "minecraft:set_count",
++      "count": {
++        "min": 1,
++        "max": 1
++      }
++    }
++  ]
++}
 ```
 </details>
 
 <details>
 <summary>cobbleloots/loot_table/loot_ball/dive</summary>
-  
+
 ```diff
 +{
 +  "type": "minecraft:tag",
 +  "name": "simpletms:tr_items",
 +  "expand": true,
-+  "weight": 15
++  "weight": 15,
++  "functions": [
++    {
++      "function": "minecraft:set_count",
++      "count": {
++        "min": 1,
++        "max": 1
++      }
++    }
++  ]
 +},
 +{
 +  "type": "minecraft:tag",
 +  "name": "simpletms:tm_items",
 +  "expand": true,
-+  "weight": 2
++  "weight": 2,
++  "functions": [
++    {
++      "function": "minecraft:set_count",
++      "count": {
++        "min": 1,
++        "max": 1
++      }
++    }
++  ]
 +}
-
 ```
 </details>
 
 <details>
 <summary>cobbleloots/loot_table/loot_ball/dusk</summary>
-  
+
 ```diff
 +{
 +  "type": "minecraft:tag",
 +  "name": "simpletms:tr_items",
 +  "expand": true,
-+  "weight": 25
++  "weight": 25,
++  "functions": [
++    {
++      "function": "minecraft:set_count",
++      "count": {
++        "min": 1,
++        "max": 1
++      }
++    }
++  ]
 +},
 +{
 +  "type": "minecraft:tag",
 +  "name": "simpletms:tm_items",
 +  "expand": true,
-+  "weight": 6
++  "weight": 6,
++  "functions": [
++    {
++      "function": "minecraft:set_count",
++      "count": {
++        "min": 1,
++        "max": 1
++      }
++    }
++  ]
 +}
-
 ```
 </details>
 
