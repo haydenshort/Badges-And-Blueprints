@@ -1982,6 +1982,37 @@ Level Up:
 56 - Final Gambit
 
 ===================
+050 - Diglett (Alolan)
+===================
+Ability:
+Old     Sand Veil / Tangling Hair / Sand Force 
+New     Sand Force / Tangling Hair / Sand Force
+
+Level Up:
+1 - Astonish
+1 - Growl
+1 - Mud-Slap
+1 - Scratch
+4 - Sand Attack
+7 - Metal Claw
+10 - Ancient Power
+13 - Bulldoze
+16 - Pursuit
+19 - Iron Head
+22 - Ally Switch
+25 - Sucker Punch
+28 - Smart Strike
+31 - Reversal
+34 - Slash
+34 - Night Slash
+37 - Beat Up
+40 - Iron Defense
+44 - High Horsepower
+48 - Memento
+52 - Fissure
+56 - Final Gambit
+
+===================
 051 - Dugtrio
 ===================
 Ability:
@@ -2013,3 +2044,71 @@ Level Up:
 54 - Fissure
 58 - Final Gambit
 62 - Swords Dance
+
+===================
+051 - Dugtrio (Alolan)
+===================
+Ability:
+Old     Sand Veil / Tangling Hair / Sand Force 
+New     Sand Force / Tangling Hair / Sand Force
+
+Level Up:
+1 - Astonish
+1 - Growl
+1 - Mud-Slap
+1 - Scratch
+4 - Sand Attack
+7 - Metal Claw
+10 - Ancient Power
+13 - Bulldoze
+16 - Pursuit
+19 - Iron Head
+22 - Ally Switch
+25 - Sucker Punch
+26 - Tri Attack
+29 - Smart Strike
+32 - Reversal
+35 - Slash
+35 - Night Slash
+38 - Beat Up
+42 - Iron Defense
+46 - High Horsepower
+50 - Memento
+54 - Fissure
+58 - Final Gambit
+62 - Swords Dance
+
+===================
+052 - Meowth
+===================
+Base Stats:
+Old     40 HP / 45 Atk / 35 Def / 40 SAtk / 40 SDef / 90 Spd / 290 BST
+New     45 HP / 60 Atk / 35 Def / 30 SAtk / 40 SDef / 90 Spd / 300 BST
+
+Ability:
+Old     Pick Up / Technician / Unnerve
+New     Unnerve / Technician / Pick Up
+
+Level Up:
+1 - Scratch
+1 - Growl
+1 - Assist
+6 - Bite
+8 - Fake Out
+10 - Fury Swipes
+12 - Pay Day
+14 - Screech
+16 - Headbutt
+18 - Spite
+20 - Hypnosis
+22 - Faint Attack
+24 - Slash
+24 - Night Slash
+27 - Charm
+30 - Foul Play
+33 - Switcheroo
+36 - Nasty Plot
+39 - Play Rough
+42 - Captivate
+45 - Double-Edge
+48 - Last Resort
