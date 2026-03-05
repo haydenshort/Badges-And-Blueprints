@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:net_ball",
-          "weight": 10,
+          "weight": 21,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -21,7 +21,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:shell_bell",
-          "weight": 3,
+          "weight": 6,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -32,7 +32,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:nautilus_shell",
-          "weight": 4,
+          "weight": 9,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -46,7 +46,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:prismarine_crystals",
-          "weight": 4,
+          "weight": 9,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -60,7 +60,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:silver_powder",
-          "weight": 3,
+          "weight": 6,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -71,7 +71,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:bug_gem",
-          "weight": 6,
+          "weight": 13,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -82,17 +82,17 @@
         {
           "type": "minecraft:loot_table",
           "value": "cobbleloots:loot_ball/shared/medicine_uncommon",
-          "weight": 6
+          "weight": 13
         },
         {
           "type": "minecraft:loot_table",
           "value": "cobbleloots:loot_ball/shared/candy_uncommon",
-          "weight": 1
+          "weight": 2
         },
         {
           "type": "minecraft:loot_table",
           "value": "cobbleloots:loot_ball/shared/tools_uncommon",
-          "weight": 2
+          "weight": 4
         },
         {
           "type": "minecraft:tag",

@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:timer_ball",
-          "weight": 10,
+          "weight": 20,
           "functions": [
             {
               "function": "set_count",
@@ -21,7 +21,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:gold_ingot",
-          "weight": 9,
+          "weight": 18,
           "functions": [
             {
               "function": "set_count",
@@ -35,7 +35,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:lagging_tail",
-          "weight": 2,
+          "weight": 4,
           "functions": [
             {
               "function": "set_count",
@@ -46,7 +46,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:light_clay",
-          "weight": 2,
+          "weight": 4,
           "functions": [
             {
               "function": "set_count",
@@ -57,7 +57,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:grip_claw",
-          "weight": 2,
+          "weight": 4,
           "functions": [
             {
               "function": "set_count",
@@ -68,7 +68,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:terrain_extender",
-          "weight": 2,
+          "weight": 4,
           "functions": [
             {
               "function": "set_count",
@@ -79,17 +79,17 @@
         {
           "type": "minecraft:loot_table",
           "value": "cobbleloots:loot_ball/shared/medicine_uncommon",
-          "weight": 8
+          "weight": 16
         },
         {
           "type": "minecraft:loot_table",
           "value": "cobbleloots:loot_ball/shared/candy_uncommon",
-          "weight": 2
+          "weight": 4
         },
         {
           "type": "minecraft:loot_table",
           "value": "cobbleloots:loot_ball/shared/tools_uncommon",
-          "weight": 4
+          "weight": 9
         },
         {
           "type": "minecraft:tag",

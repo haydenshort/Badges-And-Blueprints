@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:dive_ball",
-          "weight": 10,
+          "weight": 18,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -21,7 +21,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:deep_sea_scale",
-          "weight": 4,
+          "weight": 8,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -32,7 +32,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:deep_sea_tooth",
-          "weight": 4,
+          "weight": 8,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -43,7 +43,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:prismarine_shard",
-          "weight": 5,
+          "weight": 10,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -57,7 +57,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:prismarine_crystals",
-          "weight": 5,
+          "weight": 10,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -71,7 +71,7 @@
         {
           "type": "minecraft:item",
           "name": "cobblemon:mystic_water",
-          "weight": 5,
+          "weight": 10,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -82,17 +82,17 @@
         {
           "type": "minecraft:loot_table",
           "value": "cobbleloots:loot_ball/shared/medicine_uncommon",
-          "weight": 8
+          "weight": 11
         },
         {
           "type": "minecraft:loot_table",
           "value": "cobbleloots:loot_ball/shared/ev_uncommon",
-          "weight": 2
+          "weight": 4
         },
         {
           "type": "minecraft:loot_table",
           "value": "cobbleloots:loot_ball/shared/candy_uncommon",
-          "weight": 1
+          "weight": 2
         },
         {
           "type": "minecraft:tag",
