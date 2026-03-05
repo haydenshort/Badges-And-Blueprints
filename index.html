@@ -29,7 +29,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .site-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 52px; letter-spacing: 4px; color: var(--text); line-height: 1.1; }
 
 /* ── Search ────────────────────────────────────────────────────── */
-.search-wrap { max-width: 960px; margin: 16px auto; padding: 0 18px; }
+.search-wrap { max-width: 960px; margin: 0 auto; padding: 10px 18px; position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--border); }
 .search-wrap input {
   width: 100%; background: var(--surface); border: 1px solid var(--border);
   border-radius: 8px; padding: 12px 18px; color: var(--text);
@@ -204,9 +204,43 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
   .gen-section { margin: 12px 8px; }
   .gen-header { padding: 6px 8px; margin-bottom: 6px; }
 
-  .pokemon-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .pokemon-card { margin-bottom: 0; border-radius: 12px; }
-  .pokemon-card.expanded { grid-column: 1 / -1; }
+  .pokemon-cards-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pokemon-card {
+    width: calc(33.333% - 6px);
+    margin-bottom: 0; border-radius: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4,0,0.2,1),
+                transform 0.2s cubic-bezier(0.4,0,0.2,1);
+  }
+  .pokemon-card.animating {
+    position: fixed;
+    z-index: 100;
+    transition: left 0.38s cubic-bezier(0.4,0,0.2,1),
+                top 0.38s cubic-bezier(0.4,0,0.2,1),
+                width 0.38s cubic-bezier(0.4,0,0.2,1),
+                height 0.38s cubic-bezier(0.4,0,0.2,1),
+                border-radius 0.38s cubic-bezier(0.4,0,0.2,1);
+    will-change: left, top, width, border-radius;
+  }
+  .pokemon-card.expanded {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    border-radius: 16px;
+  }
+  .pokemon-cards-grid.has-expanded {
+    /* placeholder to maintain scroll height */
+  }
+  .tile-placeholder { visibility: hidden; pointer-events: none; flex-shrink: 0; }
+  .tile-dimmed {
+    opacity: 0.25;
+    pointer-events: none;
+    transition: opacity 0.25s cubic-bezier(0.4,0,0.2,1);
+  }
+  .body-locked { overflow: hidden; }
 
   .card-header {
     flex-direction: column; align-items: center; justify-content: center;
@@ -216,6 +250,10 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
     flex-direction: row !important; align-items: center !important;
     padding: 10px 12px !important; min-height: unset !important;
     gap: 8px !important; text-align: left !important; background: var(--surface2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--border);
   }
   .name-sprite-wrap { flex-direction: column; align-items: center; gap: 2px; flex: unset; width: 100%; }
   .card-header.active .name-sprite-wrap { flex-direction: row !important; align-items: center !important; gap: 8px !important; flex: 1 !important; width: auto !important; }
@@ -1030,6 +1068,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 <div class="ability-slot"><span class="slot-tag">2</span> Tinted Lens</div>
 <div class="ability-slot changed hidden-ab"><span class="slot-tag">H</span> Shield Dust</div>
 </div></div></div><div class="section-block"><div class="section-label">Move Compatibility</div><ul class="move-notes"><li class="move-note"><span class="tm">TM58</span> Hurricane</li><li class="move-note"><span class="tm">TM76</span> Bug Buzz</li><li class="move-note"><span class="tm">HM02</span> Fly</li><li class="move-note">Compatible with some Gen 6-9 Moves via TM and Breeding.</li></ul></div><div class="section-block"><div class="section-label">Level-Up Moves</div><div class="levelup-scroll"><table class="levelup-table"><thead><tr><th>Lv.</th><th>Move</th></tr></thead><tbody><tr><td>1</td><td>Ominous Wind</td></tr><tr><td>1</td><td>Twister</td></tr><tr><td>1</td><td>Air Cutter</td></tr><tr><td>1</td><td>Absorb</td></tr><tr><td>5</td><td>Struggle Bug</td></tr><tr><td>8</td><td>Foresight</td></tr><tr><td>11</td><td>Confusion</td></tr><tr><td>14</td><td>Acid Spray</td></tr><tr><td>16</td><td>Stun Spore</td></tr><tr><td>16</td><td>Poison Powder</td></tr><tr><td>16</td><td>Sleep Powder</td></tr><tr><td>18</td><td>Bug Bite</td></tr><tr><td>20</td><td>Psybeam</td></tr><tr><td>23</td><td>Disable</td></tr><tr><td>26</td><td>Poison Fang</td></tr><tr><td>29</td><td>Rage Powder</td></tr><tr><td>31</td><td>Sliver Wind</td></tr><tr><td>34</td><td>Skill Swap</td></tr><tr><td>38</td><td>Signal Beam</td></tr><tr><td>42</td><td>Morning Sun</td></tr><tr><td>46</td><td>Toxic Spikes</td></tr><tr><td>50</td><td>Quiver Dance</td></tr><tr><td>54</td><td>Bug Buzz</td></tr><tr><td>58</td><td>Baton Pass</td></tr></tbody></table></div></div></div></div>
+  </div>
 
   <div class="pokemon-card" id="card_050_Diglett" data-type="Ground">
     <div class="card-header" onclick="toggle(this)">
@@ -1067,7 +1106,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
     </div>
     <div class="card-body"><div class="card-body-inner"><div class="section-block"><div class="section-label">Ability</div><div class="ability-compare"><div class="ability-col"><label>Old</label><div class="ability-slot removed"><span class="slot-tag">1</span> Sand Veil</div><div class="ability-slot"><span class="slot-tag">2</span> Tangling Hair</div><div class="ability-slot hidden-ab"><span class="slot-tag">H</span> Sand Force</div></div><div class="ability-col"><label>New</label><div class="ability-slot changed"><span class="slot-tag">1</span> Sand Force</div><div class="ability-slot"><span class="slot-tag">2</span> Tangling Hair</div><div class="ability-slot hidden-ab"><span class="slot-tag">H</span> Sand Force</div></div></div></div><div class="section-block"><div class="section-label">Level-Up Moves</div><div class="levelup-scroll"><table class="levelup-table"><thead><tr><th>Lv.</th><th>Move</th></tr></thead><tbody><tr><td>1</td><td>Astonish</td></tr><tr><td>1</td><td>Growl</td></tr><tr><td>1</td><td>Mud-Slap</td></tr><tr><td>1</td><td>Scratch</td></tr><tr><td>4</td><td>Sand Attack</td></tr><tr><td>7</td><td>Metal Claw</td></tr><tr><td>10</td><td>Ancient Power</td></tr><tr><td>13</td><td>Bulldoze</td></tr><tr><td>16</td><td>Pursuit</td></tr><tr><td>19</td><td>Iron Head</td></tr><tr><td>22</td><td>Ally Switch</td></tr><tr><td>25</td><td>Sucker Punch</td></tr><tr><td>26</td><td>Tri Attack</td></tr><tr><td>29</td><td>Smart Strike</td></tr><tr><td>32</td><td>Reversal</td></tr><tr><td>35</td><td>Slash</td></tr><tr><td>35</td><td>Night Slash</td></tr><tr><td>38</td><td>Beat Up</td></tr><tr><td>42</td><td>Iron Defense</td></tr><tr><td>46</td><td>High Horsepower</td></tr><tr><td>50</td><td>Memento</td></tr><tr><td>54</td><td>Fissure</td></tr><tr><td>58</td><td>Final Gambit</td></tr><tr><td>62</td><td>Swords Dance</td></tr></tbody></table></div></div></div></div>
   </div>
-</div>
+
   <div class="pokemon-card" id="card_052_Meowth" data-type="Normal">
     <div class="card-header" onclick="toggle(this)">
       <span class="dex-number">#052</span>
@@ -1076,6 +1115,8 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
       <span class="chevron">▼</span>
     </div>
     <div class="card-body"><div class="card-body-inner"><div class="section-block"><div class="section-label">Base Stats</div><table class="stat-table"><thead><tr><th></th><th>HP</th><th>Atk</th><th>Def</th><th>SAtk</th><th>SDef</th><th>Spd</th><th>BST</th></tr></thead><tbody><tr class="old"><td>Old</td><td>40</td><td>45</td><td>35</td><td>40</td><td>40</td><td>90</td><td>290</td></tr><tr class="new"><td>New</td><td><strong>45</strong></td><td><strong>60</strong></td><td>35</td><td><strong>30</strong></td><td>40</td><td>90</td><td><strong>300</strong></td></tr></tbody></table></div><div class="section-block"><div class="section-label">Ability</div><div class="ability-compare"><div class="ability-col"><label>Old</label><div class="ability-slot removed"><span class="slot-tag">1</span> Pick Up</div><div class="ability-slot"><span class="slot-tag">2</span> Technician</div><div class="ability-slot removed hidden-ab"><span class="slot-tag">H</span> Unnerve</div></div><div class="ability-col"><label>New</label><div class="ability-slot changed"><span class="slot-tag">1</span> Unnerve</div><div class="ability-slot"><span class="slot-tag">2</span> Technician</div><div class="ability-slot changed hidden-ab"><span class="slot-tag">H</span> Pick Up</div></div></div></div><div class="section-block"><div class="section-label">Level-Up Moves</div><div class="levelup-scroll"><table class="levelup-table"><thead><tr><th>Lv.</th><th>Move</th></tr></thead><tbody><tr><td>1</td><td>Scratch</td></tr><tr><td>1</td><td>Growl</td></tr><tr><td>1</td><td>Assist</td></tr><tr><td>6</td><td>Bite</td></tr><tr><td>8</td><td>Fake Out</td></tr><tr><td>10</td><td>Fury Swipes</td></tr><tr><td>12</td><td>Pay Day</td></tr><tr><td>14</td><td>Screech</td></tr><tr><td>16</td><td>Headbutt</td></tr><tr><td>18</td><td>Spite</td></tr><tr><td>20</td><td>Hypnosis</td></tr><tr><td>22</td><td>Faint Attack</td></tr><tr><td>24</td><td>Slash</td></tr><tr><td>24</td><td>Night Slash</td></tr><tr><td>27</td><td>Charm</td></tr><tr><td>30</td><td>Foul Play</td></tr><tr><td>33</td><td>Switcheroo</td></tr><tr><td>36</td><td>Nasty Plot</td></tr><tr><td>39</td><td>Play Rough</td></tr><tr><td>42</td><td>Captivate</td></tr><tr><td>45</td><td>Double-Edge</td></tr><tr><td>48</td><td>Last Resort</td></tr></tbody></table></div></div></div></div>
+  </div>
+
   </div>
 </div>
 </div>
@@ -1095,6 +1136,7 @@ function toggle(header) {
       const h = c.querySelector('.card-header');
       h.classList.remove('active');
       c.classList.remove('expanded');
+      c.classList.remove('animating');
       const s = h.querySelector('.pokemon-sprite');
       if (s) s.classList.remove('bobbing');
       h.nextElementSibling.classList.remove('open');
@@ -1103,22 +1145,112 @@ function toggle(header) {
 
   if (isOpening) {
     header.classList.add('active');
-    card.classList.add('expanded');
-    if (isMobile) {
-      document.querySelectorAll('.pokemon-card').forEach(c => {
-        if (c !== card) c.classList.add('tile-hidden');
-      });
-    }
     if (sprite) sprite.classList.add('bobbing');
-    setTimeout(() => { body.classList.add('open'); }, 180);
+
+    if (isMobile) {
+      // Save scroll position and tile rect
+      card._savedScrollY = window.scrollY;
+      const rect = card.getBoundingClientRect();
+      card._savedTileRect = { left: rect.left, top: rect.top, width: rect.width, height: rect.height };
+
+      // Dim all other tiles
+      document.querySelectorAll('.pokemon-card').forEach(c => {
+        if (c !== card) c.classList.add('tile-dimmed');
+      });
+
+      // Insert placeholder to hold the tile's space
+      const placeholder = document.createElement('div');
+      placeholder.className = 'tile-placeholder';
+      placeholder.style.width = rect.width + 'px';
+      placeholder.style.height = rect.height + 'px';
+      placeholder.style.flexShrink = '0';
+      card.parentNode.insertBefore(placeholder, card);
+      card._placeholder = placeholder;
+
+      // Lock body scroll
+      document.body.classList.add('body-locked');
+
+      // Pin card at its current position
+      card.style.left  = rect.left + 'px';
+      card.style.top   = rect.top + 'px';
+      card.style.width = rect.width + 'px';
+      card.classList.add('animating');
+
+      // Animate to full width at top of viewport
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          const gap = 8;
+          card.style.left  = gap + 'px';
+          card.style.top   = gap + 'px';
+          card.style.width = (window.innerWidth - gap * 2) + 'px';
+        });
+      });
+
+      // Lock as expanded, open content
+      setTimeout(() => {
+        card.classList.remove('animating');
+        card.classList.add('expanded');
+        card.style.left  = '';
+        card.style.top   = '';
+        card.style.width = '';
+        body.classList.add('open');
+      }, 420);
+
+    } else {
+      card.classList.add('expanded');
+      setTimeout(() => { body.classList.add('open'); }, 180);
+    }
+
   } else {
     header.classList.remove('active');
     if (sprite) sprite.classList.remove('bobbing');
     body.classList.remove('open');
-    setTimeout(() => {
+    const savedY = card._savedScrollY;
+    const placeholder = card._placeholder;
+
+    if (isMobile) {
+      setTimeout(() => {
+        card.classList.remove('expanded');
+        card.classList.add('animating');
+        card.style.left         = '0';
+        card.style.top          = '0';
+        card.style.width        = '100vw';
+        card.style.borderRadius = '16px';
+
+        // Restore scroll so placeholder is at original position
+        if (savedY !== undefined) {
+          window.scrollTo({ top: savedY, behavior: 'instant' });
+        }
+
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            const targetRect = placeholder
+              ? placeholder.getBoundingClientRect()
+              : card._savedTileRect;
+            card.style.left  = targetRect.left + 'px';
+            card.style.top   = targetRect.top + 'px';
+            card.style.width = targetRect.width + 'px';
+          });
+        });
+
+        setTimeout(() => {
+          card.classList.remove('animating');
+          card.style.left         = '';
+          card.style.top          = '';
+          card.style.width        = '';
+          card.style.borderRadius = '';
+          card.style.height       = '';
+          if (placeholder) placeholder.remove();
+          card._placeholder = null;
+          // Undim all tiles and unlock scroll
+          document.querySelectorAll('.tile-dimmed').forEach(c => c.classList.remove('tile-dimmed'));
+          document.body.classList.remove('body-locked');
+        }, 420);
+      }, 100);
+
+    } else {
       card.classList.remove('expanded');
-      document.querySelectorAll('.tile-hidden').forEach(c => c.classList.remove('tile-hidden'));
-    }, 200);
+    }
   }
 }
 
