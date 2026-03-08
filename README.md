@@ -3,7 +3,7 @@ Pokemon meets Stardew Valley, Factorio, and Elden Ring in Minecraft!
 ======
 This is the official repository and issue-tracker for Cobblemon Odyssey.
 
-This pack contains the Complete Cobblemon Collection Data Pack by Xca, which tries to add a majority of the Cobblemon missing from the base mod.
+This pack contains the Complete Cobblemon Collection Data Pack by [Xcavalier](https://www.curseforge.com/members/xcavalier/projects), which tries to add a majority of the Cobblemon missing from the base mod.
 
 Cobblemon Changes
 ======
