@@ -17,7 +17,7 @@ ServerEvents.recipes(event => {
                 targetItem,
                 {item: "createmonballsoverhaul:rubber_stamp_lid"}
             ],
-            results: [{
+            result: [{
                 item: output,
                 count: count
             }],
