@@ -14,6 +14,7 @@
   - Decreased breeding pasture size.
   - Enabled the ability to view egg stats.
 - Added SimpleTMs to Cobbleloot Loot Balls.
+- Reduced SparseStructure Spread to 1.2 from 1.4.
 
 ---
 
@@ -77,7 +78,7 @@
 
 ## Recipes
 
-### Added (10)
+### Added (32)
 
 <details>
 <summary>justhammers/kjs/netherite_hammer</summary>
@@ -235,6 +236,556 @@
 +    { "id": "createmonballsoverhaul:stamped_stripped_apricorn_log_lid" }
 +  ],
 +  "keep_held_item": true
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/brass_ball_mechanism</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:brass_ball_base" },
++    { "tag": "c:nuggets/brass" },
++    { "item": "create:shaft" },
++    { "item": "createmonballsoverhaul:brass_ball_base" }
++  ],
++  "results": [
++    { "count": 1, "id": "createmonballsoverhaul:brass_ball_mechanism" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/brass_ancient_ball_mechanism</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:brass_ball_base" },
++    { "item": "create:andesite_alloy" },
++    { "item": "create:shaft" },
++    { "item": "createmonballsoverhaul:brass_ball_base" }
++  ],
++  "results": [
++    { "count": 1, "id": "createmonballsoverhaul:brass_ancient_ball_mechanism" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/copper_ball_mechanism</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ball_base" },
++    { "tag": "c:nuggets/copper" },
++    { "item": "create:shaft" },
++    { "item": "createmonballsoverhaul:copper_ball_base" }
++  ],
++  "results": [
++    { "count": 1, "id": "createmonballsoverhaul:copper_ball_mechanism" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/copper_ancient_ball_mechanism</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ball_base" },
++    { "item": "create:andesite_alloy" },
++    { "item": "create:shaft" },
++    { "item": "createmonballsoverhaul:copper_ball_base" }
++  ],
++  "results": [
++    { "count": 1, "id": "createmonballsoverhaul:copper_ancient_ball_mechanism" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/iron_ball_mechanism</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:iron_ball_base" },
++    { "tag": "c:nuggets/iron" },
++    { "item": "create:shaft" },
++    { "item": "createmonballsoverhaul:iron_ball_base" }
++  ],
++  "results": [
++    { "count": 1, "id": "createmonballsoverhaul:iron_ball_mechanism" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/iron_ancient_ball_mechanism</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:iron_ball_base" },
++    { "item": "create:andesite_alloy" },
++    { "item": "create:shaft" },
++    { "item": "createmonballsoverhaul:iron_ball_base" }
++  ],
++  "results": [
++    { "count": 1, "id": "createmonballsoverhaul:iron_ancient_ball_mechanism" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/sturdy_ball_mechanism</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:sturdy_ball_base" },
++    { "item": "create:andesite_alloy" },
++    { "item": "create:shaft" },
++    { "item": "createmonballsoverhaul:sturdy_ball_base" }
++  ],
++  "results": [
++    { "count": 1, "id": "createmonballsoverhaul:sturdy_ball_mechanism" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/sturdy_ancient_ball_mechanism</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:sturdy_ball_base" },
++    { "item": "create:rose_quartz" },
++    { "item": "create:shaft" },
++    { "item": "createmonballsoverhaul:sturdy_ball_base" }
++  ],
++  "results": [
++    { "count": 1, "id": "createmonballsoverhaul:sturdy_ancient_ball_mechanism" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/azure_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ball_mechanism" },
++    { "item": "createmonballsoverhaul:blue_ball_lid" },
++    { "item": "createmonballsoverhaul:blank_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:azure_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/citrine_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ball_mechanism" },
++    { "item": "createmonballsoverhaul:yellow_ball_lid" },
++    { "item": "createmonballsoverhaul:blank_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:citrine_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/poke_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ball_mechanism" },
++    { "item": "createmonballsoverhaul:red_ball_lid" },
++    { "item": "createmonballsoverhaul:blank_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:poke_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/premier_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ball_mechanism" },
++    { "item": "createmonballsoverhaul:white_ball_lid" },
++    { "item": "createmonballsoverhaul:blank_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:premier_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/roseate_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ball_mechanism" },
++    { "item": "createmonballsoverhaul:pink_ball_lid" },
++    { "item": "createmonballsoverhaul:blank_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:roseate_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/slate_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ball_mechanism" },
++    { "item": "createmonballsoverhaul:black_ball_lid" },
++    { "item": "createmonballsoverhaul:blank_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:slate_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/verdant_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ball_mechanism" },
++    { "item": "createmonballsoverhaul:green_ball_lid" },
++    { "item": "createmonballsoverhaul:blank_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:verdant_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/ancient_azure_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ancient_ball_mechanism" },
++    { "item": "createmonballsoverhaul:coated_blue_ball_lid" },
++    { "item": "createmonballsoverhaul:apricorn_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:ancient_azure_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/ancient_citrine_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ancient_ball_mechanism" },
++    { "item": "createmonballsoverhaul:coated_yellow_ball_lid" },
++    { "item": "createmonballsoverhaul:apricorn_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:ancient_citrine_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/ancient_poke_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ancient_ball_mechanism" },
++    { "item": "createmonballsoverhaul:coated_red_ball_lid" },
++    { "item": "createmonballsoverhaul:apricorn_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:ancient_poke_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/ancient_premier_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ancient_ball_mechanism" },
++    { "item": "createmonballsoverhaul:coated_white_ball_lid" },
++    { "item": "createmonballsoverhaul:apricorn_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:ancient_premier_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/ancient_roseate_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ancient_ball_mechanism" },
++    { "item": "createmonballsoverhaul:coated_pink_ball_lid" },
++    { "item": "createmonballsoverhaul:apricorn_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:ancient_roseate_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/ancient_slate_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ancient_ball_mechanism" },
++    { "item": "createmonballsoverhaul:coated_black_ball_lid" },
++    { "item": "createmonballsoverhaul:apricorn_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:ancient_slate_ball" }
++  ],
++  "time": 120
++}
+```
+</details>
+
+<details>
+<summary>oritech/assembler/ancient_verdant_ball</summary>
+  
+```diff
++{
++  "type": "oritech:assembler",
++  "fluidInput": {
++    "amount": 0,
++    "fluid": "minecraft:empty"
++  },
++  "fluidOutputs": [],
++  "ingredients": [
++    { "item": "createmonballsoverhaul:copper_ancient_ball_mechanism" },
++    { "item": "createmonballsoverhaul:coated_green_ball_lid" },
++    { "item": "createmonballsoverhaul:apricorn_ball_lid" },
++    { "tag": "c:rods/iron" }
++  ],
++  "results": [
++    { "count": 1, "id": "cobblemon:ancient_verdant_ball" }
++  ],
++  "time": 120
 +}
 ```
 </details>
